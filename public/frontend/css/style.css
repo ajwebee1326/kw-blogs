@@ -511,7 +511,9 @@ label strong {
 
 /*--- Responsive styles ---*/
 @media(max-width:991px) {
-
+section{
+    overflow: hidden;
+}
 .top-header{
     padding: 0;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.07);
@@ -525,6 +527,10 @@ label strong {
 }
 .nav-small{
     display: none;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+    border: 1px solid var(--bg-secondary);
 }
 .navbar .container{
     display: grid;
@@ -541,7 +547,7 @@ label strong {
     padding: 0;
 }
 .top-header .navbar .navbar-brand img{
-    width: 114px
+    width: 130px
 }
  /*--- Footer ---*/
 .footer-list h5{
@@ -689,6 +695,30 @@ label strong {
     width: 300px;
 }
 }
+@media(max-width: 460px){
+    .navbar .container{
+        display: grid;
+        grid-template-columns: 230px 1fr auto;
+    }
+}
+@media(max-width: 414px){
+    .navbar .container{
+        display: grid;
+        grid-template-columns: 215px 1fr auto;
+    }
+}
+@media(max-width:390px){
+    .navbar .container{
+        display: grid;
+        grid-template-columns: 180px 1fr auto;
+    }
+}
+@media(max-width:360px){
+    .navbar .container{
+        display: grid;
+        grid-template-columns: 160px 1fr auto;
+    }
+}
 
 @media(max-width: 1399px) {
     p {
@@ -735,6 +765,7 @@ label strong {
     justify-content: center;
 }
 
+
 .banner-title {
     position: relative;
 }
@@ -756,40 +787,46 @@ label strong {
 }
 
 .blog h1 {
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 50px;
+    line-height: 60px;
     margin-bottom: 15px;
     text-transform: capitalize;
 }
 
 .blog h2 {
-    font-size: 26px;
-    line-height: 36px;
+    font-size: 34px;
+    line-height: 44px;
     margin-bottom: 15px;
 }
 
 .blog h3 {
-    font-size: 24px;
-    line-height: 34px;
+    font-size: 28px;
+    line-height: 38px;
     
 }
+.blog-post-banner img{
+    width: 100%;
+    padding: 30px 0;
+}
 .blog-post-content h2{
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 34px;
+    line-height: 44px;
     margin-bottom: 15px;
 }
 .blog-post-content h3{
-    font-size: 24px;
-    line-height: 34px;
+    font-size: 28px;
+    line-height: 38px;
     margin-bottom: 15px;
 }
 .blog-post-content h4{
-    font-size: 22px;
-    line-height: 32px;
+    font-size: 24px;
+    line-height: 34px;
     margin-bottom: 15px;
 }
 .blog-post-content img{
  margin-bottom: 15px;
+ width: 100% !important;
+ height: auto !important;
 }
 .blog-post-content p{
     margin-bottom: 15px;
@@ -816,7 +853,7 @@ label strong {
     margin-bottom: 25px;
 }
 
-.blog .blog-post-category a {
+.blog-post-category a {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -826,40 +863,42 @@ label strong {
     letter-spacing: 0.5px;
     line-height: 26px;
     margin: 0 18px 3px 0;
-    color: #9b9b9b;
+    color: #fff;
+    background-color: #5840BA;
+    padding: 5px 15px;
+    border-radius: 30px;
     text-decoration: none;
 }
 
-.blog .blog-post-meta {
+.blog-post-meta {
     font-size: 14px;
     line-height: 24px;
     margin: 0 0 12px;
     position: relative;
 }
 
-.blog .blog-post-meta>div {
+.blog-post-meta>div {
     display: inline-flex;
     align-items: center;
     margin: 0 0 5px;
     font-weight: 500;
 }
 
-.blog .blog-post-meta>div:not(:first-child) {
+.blog-post-meta>div:not(:first-child) {
     padding: 0 0 0 13px;
 }
-
-.blog .blog-post-meta>div span:first-child {
+.blog-post-meta>div span:first-child {
     font-weight: 500;
     font-size: 16px;
 }
 
-.blog .blog-post-meta .blog-post-author span {
+.blog-post-meta .blog-post-author span {
     display: block;
     color: var(--primary);
 }
 
 
-.blog .blog-post-footer .blog-post-tag {
+ .blog-post-footer .blog-post-tag {
     display: inline-block;
     vertical-align: middle;
     color: var(--grey);
@@ -1073,15 +1112,17 @@ label strong {
 .post-info .arrow-hover{
     display: inline-block;
     position: relative;
-    width: 17px;
+    width: 100px;
     height: 20px;
     line-height: 20px;
     overflow: hidden;
     margin: 10px 0 0 0;
 }
-.arrow-hover::before{
-    top: 0;
-    right: 1px;
+
+
+.arrow-hover::after{
+    top: 2px;
+    right: 5px;
     position: absolute;
     display: block;
     font-family: 'FontAwesome';
@@ -1091,9 +1132,13 @@ label strong {
     line-height: 20px;
     transition: all .4s ease;
     content: '\f178';
+    opacity: 0;
 }
-.post-info:hover .arrow-hover::before{
-  font-size: 20px;
+.post-info:hover .arrow-hover::after{
+  font-size: 15px;
+  right: 6px;
+  opacity: 1;
+  top: 2px;
 }
 /*--- Block Quote ----*/
 blockquote{
@@ -1261,12 +1306,12 @@ blockquote p{
     display: flex;
     column-gap: 10px;
     margin-bottom: 10px;
-    color: var(--grey);
     align-items: center;
 }
 .recent-post-meta .recent-post-date{
     font-size: 13px;
     cursor: pointer;
+    color: var(--primary);
 }
 .recent-post-date:hover{
     color: var(--secondary);

@@ -55,11 +55,7 @@
                       @enderror
                     </div>
                   </div>
-                 
-                 
-
-                  <div class="row mb-3">
-                    <div class="col-md-6">
+                  <div class="col-md-6">
                         <label class="form-label" for="category_id">Blog Category</label>
                         <div class="input-group input-group-merge">
                             <span class="input-group-text"><i class="bx bx-category"></i></span>
@@ -70,7 +66,12 @@
                                 @endforeach
                             </select>
                         </div>
-                    </div>
+                  </div>
+                 
+                 
+
+                  <div class="row mb-3">
+                    
                     <div class="col-md-6">
                         <label class="form-label" for="tags">Tags</label>
                         <select class="form-select" id="tags" name="tags[]" multiple="multiple">
@@ -82,10 +83,7 @@
                           
                         </select>
                     </div>
-                </div>
-              
-
-                  <div class="col-md-3">
+                    <div class="col-md-3">
                     <div class="mb-3">
                       <label class="form-label" for="basic-icon-default-message">Thumbnail</label>
                       <div class="input-group">
@@ -112,10 +110,6 @@
                       </div>
                     </div>
                   </div>
-
-
-
-
                   <div class="col-md-12">
                     <div class="mb-3">
                       <label class="form-label" for="basic-icon-default-message">Description</label>
@@ -125,27 +119,37 @@
                       @enderror
                     </div>
                   </div>
-
-                  <div class="col-md-12">
+                  <div class="col-md-6">
                     <div class="mb-3">
                       <label class="form-label" for="basic-icon-default-message">Short Description</label>
-                      <textarea name="short_description" class="form-control"></textarea>
+                      <textarea name="short_description" class="form-control" rows="1" columns="2"></textarea>
                     </div>
                   </div>
 
-                  <div class="col-md-6">
+                  <div class="col-md-3">
                     <div class="mb-3">
                       <label class="form-label" for="basic-icon-default-message">Meta Title</label>
                       <input type="text" name="meta_title" class="form-control" placeholder="Meta Title">
                     </div>
                   </div>
 
-                  <div class="col-md-6">
+                  <div class="col-md-3">
                     <div class="mb-3">
                       <label class="form-label" for="basic-icon-default-message">Meta Description</label>
                       <input type="text" name="meta_description" class="form-control" placeholder="Meta Description">
                     </div>
                   </div>
+                </div>
+              
+
+                 
+
+
+
+
+               
+
+                 
                 
 
 

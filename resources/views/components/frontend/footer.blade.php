@@ -63,8 +63,8 @@
                         <div class="footer-list">
                             <h5 class="text-pin pb-3">Other Link</h5>
                             <ul class="list-unstyled footer-icon footer-icon-connect">
-                                <li><a href="blog.php"><span class='bx bx-chevrons-right'></span>Blog</a></li>
-                                <li><a href="#"><span class='bx bx-chevrons-right'></span>Contact Us</a></li>
+                                <li><a href="{{route('viewBlog')}}"><span class='bx bx-chevrons-right'></span>Blog</a></li>
+                                <li><a href="{{route('viewContactUsPage')}}"><span class='bx bx-chevrons-right'></span>Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
