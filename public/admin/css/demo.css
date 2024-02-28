@@ -153,3 +153,17 @@ div .btn-primary:hover{
  div .bg-footer-theme .footer-link:hover{
   color: var(--bg-pink);
  }
+
+
+ /* table style */
+ 
+ .table thead{
+
+  background-color: #bf9bec;
+  
+ }
+
+ .table thead th {
+
+  color: #fff !important;
+ }

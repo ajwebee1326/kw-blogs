@@ -7,6 +7,8 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\MetaController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TagsController;
+use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\NewsLetterController;
 
 
 use App\Http\Controllers\WebSiteController;
@@ -45,6 +47,14 @@ Route::group(['middleware' => 'auth','prefix'=>'/admin'], function () {
     Route::get('/tags/edit/{tags}', [TagsController::class, 'edit'])->name('tags.edit');
     Route::delete('/tags/edit/{tags}', [TagsController::class, 'destroy'])->name('tags.destroy');
     Route::put('/tags/update/{tags}', [TagsController::class, 'update'])->name('tags.update');
+
+
+
+    Route::get('/subscribe', [ContactUsController::class, 'index'])->name('subscribe');
+
+    
+    Route::get('/news-letter', [NewsLetterController::class, 'index'])->name('news');
+    Route::post('/news-letter/store', [NewsLetterController::class, 'store'])->name('news.store');
     
 
 

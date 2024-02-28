@@ -1,5 +1,5 @@
 @extends('frontend.layouts.app')
-
+@section('title', 'Contact Us')
 @section('content')
 <section class="blog-banner">
     <div class="container">
@@ -60,7 +60,7 @@
                                 <div class="col-md-6 mb-4">
                                     <div class="form-group">
                                         <label for="" class="pb-2"><strong>Phone No</strong></label>
-                                        <input type="number" class="form-control" id="phone" name="phone" placeholder="Enter Your Number" required>
+                                        <input type="number" class="form-control" id="phone"  name="phone" placeholder="Enter Your Number" required>
                                         
                                     </div>
                                     @error('phone')    
@@ -75,8 +75,8 @@
                                 </div>
                                 
                                 
-                                <div class="col-md-6 mx-auto">
-                                    <Button class="btn btn-primary btn-subscribe" >Subscribe</Button>
+                                <div class="col-md-6 mx-auto text-center">
+                                    <Button type="submit" class="btn btn-primary btn-subscribe" >Subscribe</Button>
                                 </div>
                             </div>
                     </form>
@@ -91,7 +91,7 @@
     <div class="row">
         <div class="col-md-8 mx-auto">
             <div class="row">
-                <div class="col-md-4 mb-4 mb-md-0">
+                <div class="col-md-12 col-lg-12 col-xl-4 col-12 mb-4 mb-md-0">
                     <div class="contact-details text-center">
                         <div>
                             <span class="bx bx-envelope"></span>
@@ -105,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 mb-md-0">
+                <div class="col-md-12 col-lg-12 col-xl-4 col-12 mb-4 mb-md-0">
                     <div class="contact-details text-center">
                         <div>
                             <span class="bx bx-map"></span>
@@ -119,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-12 col-lg-12 col-xl-4 col-12">
                 <div class="contact-details text-center">
                         <div>
                             <span class="bx bx-phone"></span>

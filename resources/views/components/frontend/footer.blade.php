@@ -27,9 +27,10 @@
                         </div>
                     </div>         
                     <div class="col-md-12 col-xl-7 col-lg-12 col-12">
-                        <form class="row  align-items-center news-letter">
+                        <form class="row  align-items-center news-letter" method="post" action="{{route('news.store')}}">
+                            @csrf
                             <div class="col-md-12 col-xl-7 col-lg-12 col-12 mb-md-0 mb-xl-0 mb-3 mb-md-3 mb-lg-0">
-                                <input type="text" class="form-control " id="" placeholder="Enter Your Email Address">
+                                <input type="email" class="form-control " id="" name="newsletter_email" placeholder="Enter Your Email Address" required>
                                 </div>
                             <div class="col-md-12 col-xl-5 col-lg-12 col-12 mb-lg-3 mb-xl-0 mb-3">
                                 <button type="submit" class="btn btn-primary btn-subscribe">Submit</button>

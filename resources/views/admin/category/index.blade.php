@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
 @endsection
 
+
+
 @section('content')
 <div class="card">
     <div class="card-header d-flex justify-content-between align-items-center">

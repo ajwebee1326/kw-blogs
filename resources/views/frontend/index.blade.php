@@ -1,7 +1,8 @@
 @extends('frontend.layouts.app')
 
-{{-- @section('meta_title',$meta->meta_title)
-@section('meta_description',$meta->meta_description) --}}
+
+
+@section('title', 'Home')
 
 @section('content')
 
@@ -132,42 +133,50 @@
                                             <div class="col-6 mb-4">
                                                 <div class="form-group">
                                                    <label for="" class="pb-2"><strong>Full Name</strong></label>
-                                                    <input type="text" class="form-control" id="name" placeholder="Enter Your Full Name" required>
-                                                   
+                                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Full Name" required>
                                                 </div>
+                                                @error('name')    
+                                                <div class="text-danger mt-2">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                             
                                             <div class="col-6 mb-4">
                                                 <div class="form-group">
                                                     <label for="" class="pb-2"><strong>Email</strong></label>
-                                                    <input type="email" class="form-control" id="email" placeholder="Work Email" required>
+                                                    <input type="email" class="form-control" id="email" name="email" placeholder="Work Email" required>
                                                  
                                                 </div>
+                                                @error('email')    
+                                                 <div class="text-danger mt-2">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                             <div class="col-6 mb-4">
                                                 <div class="form-group">
                                                     <label class="pb-2"><strong>Company Name</strong></label>
-                                                    <input type="text" class="form-control" id="number" placeholder="Enter Your Company Name" required>
+                                                    <input type="text" class="form-control" id="company_name" name="company_name" placeholder="Enter Your Company Name" required>
                                                     
                                                 </div>
                                             </div>
                                             <div class="col-6 mb-4">
                                                 <div class="form-group">
                                                     <label for="" class="pb-2"><strong>Phone No</strong></label>
-                                                    <input type="number" class="form-control" id="number" placeholder="Enter Your Number" required>
+                                                    <input type="number" class="form-control" id="phone" name="phone" placeholder="Enter Your Number" required>
                                                    
                                                 </div>
+                                                @error('phone')    
+                                                <div class="text-danger mt-2">{{ $message }}</div>
+                                                @enderror
                                             </div>
                                              <div class="col-md-12 mb-4">
                                                <div class="form-group">
                                                     <label for="" class="pb-2"><strong>Message</strong></label>
-                                                    <textarea name="" id="" cols="4" rows="3" class="form-control" placeholder="Enter Your Message Here"></textarea> 
+                                                    <textarea name="message" id="" cols="4" rows="3" class="form-control" placeholder="Enter Your Message Here"></textarea> 
                                                 </div>
                                             </div>
                                            
                                             
                                             <div class="col-6 mx-auto">
-                                                <Button class="btn btn-primary btn-subscribe" >Subscribe</Button>
+                                                <Button type="submit" class="btn btn-primary btn-subscribe" >Subscribe</Button>
                                             </div>
                                         </div>
                                     </form>

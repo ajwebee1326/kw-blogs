@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
 
 
-@section('title',$blog->meta_title)
+@section('title', $blog->meta_title)
 
 @section('content')
 
@@ -114,12 +114,12 @@
                                         </div>
                                         <div class="card-body">
                                             <div class="post-caption">
-                                                <div class="blog-post-category">
+                                                {{-- <div class="blog-post-category">
                                                     <a href="#">
                                                         <span class='bx bx-chevrons-right text-pink'></span>
                                                         <span class="cat-name">{{ $blog->category->name }}</span>
                                                     </a>
-                                                </div>
+                                                </div> --}}
                                                 <h6 class="post-title">
                                                     <a href="{{ route('viewBlogInner',$blog->slug) }}">{{ $blog->title  }}</a>
                                                 </h6>
@@ -180,7 +180,7 @@
                                             <div class="recent-post-date">{{ \Carbon\Carbon::parse($blog->publish_date)->format('d M y') }}</div>
                                         </div>
                                         <div class="recent-post-title">
-                                        <h6>{{$recentBlog->title}}</h6>
+                                        <h6><a class="text-white" href="{{ route('viewBlogInner',$blog->slug) }}">{{$recentBlog->title}}</a></h6>
                                     </div>
                                     
                                 </div>
