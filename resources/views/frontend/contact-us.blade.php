@@ -1,10 +1,141 @@
 @extends('frontend.layouts.app')
 
-@section('meta_title',$meta->meta_title)
-@section('meta_description',$meta->meta_description)
-
 @section('content')
+<section class="blog-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner-title">
+                    <h1>Contact Us</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sec-space">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4 mx-auto mb-5">
+                <h2>Contact Us</h2>
+                <p>We're here for anything you need. Just drop us quick message below. We'll get back in 24 hrs</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                 <div class="contact-us">
+                        <div class="form-header">
+                                <img src="{{asset('frontend')}}/images/form-icon.png" alt="img-fluid form-icon">
+                                <h5 class="text-dark mb-2">Welcome  to Kaykewalk</h5>
+                        </div>
+                    <form method="POST" action="{{route('viewContactUs')}}">
+                            @csrf
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="" class="pb-2"><strong>Full Name</strong></label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Full Name" required>
+                                    </div>
+                                    @error('name')    
+                                    <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="" class="pb-2"><strong>Email</strong></label>
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Work Email" required>
+                                        
+                                    </div>
+                                    @error('email')    
+                                    <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label class="pb-2"><strong>Company Name</strong></label>
+                                        <input type="text" class="form-control" id="company_name" name="company_name" placeholder="Enter Your Company Name" required>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-group">
+                                        <label for="" class="pb-2"><strong>Phone No</strong></label>
+                                        <input type="number" class="form-control" id="phone" name="phone" placeholder="Enter Your Number" required>
+                                        
+                                    </div>
+                                    @error('phone')    
+                                    <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
+                                </div>
+                                    <div class="col-md-12 mb-4">
+                                    <div class="form-group">
+                                        <label for="" class="pb-2"><strong>Message</strong></label>
+                                        <textarea name="message" id="" cols="4" rows="3" class="form-control" placeholder="Enter Your Message Here"></textarea> 
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="col-md-6 mx-auto">
+                                    <Button class="btn btn-primary btn-subscribe" >Subscribe</Button>
+                                </div>
+                            </div>
+                    </form>
+                 </div>
+            </div>
+        </div>
+    </div>
 
-    <h1>Contact US</h1>
-
+</section>
+<section class="sec-space pt-0">
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="contact-details text-center">
+                        <div>
+                            <span class="bx bx-envelope"></span>
+                        </div>
+                        <div>
+                            <h5>Email</h5>
+                            <p>Our friendly team is here to help</p>
+                        </div>
+                        <div>
+                            <a href="mailto:hello@kaykewalk.com">hello@kaykewalk.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="contact-details text-center">
+                        <div>
+                            <span class="bx bx-map"></span>
+                        </div>
+                        <div>
+                            <h5>Location</h5>
+                            <p>Come Say hello to our office HQ</p>
+                        </div>
+                        <div>
+                            <a href="">250 Consumers Road North York, ON M2J 4V6 Canada</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                <div class="contact-details text-center">
+                        <div>
+                            <span class="bx bx-phone"></span>
+                        </div>
+                        <div>
+                            <h5>Phone</h5>
+                            <p>Monday to Friday 10am to 5px</p>
+                        </div>
+                        <div>
+                            <a href="tel:+1(647)8748762">+1 (647) 874 8762</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
 @endsection

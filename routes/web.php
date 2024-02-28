@@ -18,7 +18,8 @@ use Illuminate\Support\Facades\Hash;
 
 Route::get('/',[WebSiteController::class,'viewIndex'])->name('viewIndex');
 Route::get('/blogs',[WebSiteController::class,'viewBlog'])->name('viewBlog');
-Route::get('/blog/{slug?}',[WebSiteController::class,'viewBlogInner'])->name('viewBlogInner');
+Route::get('/blog/blog-inners/{id}',[WebSiteController::class,'viewBlogInner'])->name('viewBlogInner');
+Route::get('/contact-us',[WebSiteController::class,'viewContactUsPage'])->name('viewContactUsPage');
 Route::post('/contact-us',[WebSiteController::class,'viewContactUs'])->name('viewContactUs');
 
 
