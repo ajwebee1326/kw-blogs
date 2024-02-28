@@ -20,20 +20,19 @@
                     <tr>
                         <th>Publish Date</th>
                         <th>Title</th>
-                        <th>Slug</th>
-                        <th>Short Description</th>
-                        <th>Description</th>
+                        
+                        <th>Category</th>
+                        <th>Tags</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody class="table-border-bottom-0">
                     @foreach($blogs as $blog)
                     <tr>
-                        <td>{{$blog->publish_date}}</td>
+                        <td>{{ \Carbon\Carbon::parse($blog->publish_date)->format('d M y') }}</td>
                         <td>{{$blog->title}}</td>
-                        <td>{{$blog->slug}}</td>
-                        <td>{{$blog->short_description}}</td>
-                        <td>{!!$blog->description!!}</td>
+                        <td>{{$blog->category->name}}</td>
+                        <td>{{$blog->tags}}</td>
                         <td>
                         <a href="{{route('blog.edit', $blog->id)}}" class="btn btn-primary btn-sm">Edit</a>
                             <form action="{{route('blog.destroy',$blog->id)}}" method="POST" class="d-inline">
