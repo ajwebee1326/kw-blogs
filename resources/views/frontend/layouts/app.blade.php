@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kw Landing Page</title>
+        <title>@yield('title')</title>
         <!--- Google Fonts --->
         <link
             href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
@@ -17,6 +17,11 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
         <!--- Css --->
         <link rel="stylesheet" href="{{asset('frontend')}}/css/style.css">
+
+        {{-- meta description --}}
+
+        
+
     </head>
 <body>
     
