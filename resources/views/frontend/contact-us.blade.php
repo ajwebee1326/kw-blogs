@@ -126,7 +126,7 @@
                         </div>
                         <div>
                             <h5>Phone</h5>
-                            <p>Monday to Friday 10am to 5px</p>
+                            <p>Monday to Friday 10am to 5pm</p>
                         </div>
                         <div>
                             <a href="tel:+1(647)8748762">+1 (647) 874 8762</a>
