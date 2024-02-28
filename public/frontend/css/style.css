@@ -514,6 +514,10 @@ label strong {
 .top-header{
     padding: 0;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+}
+.join-us{
+    border-radius: 10px;
 }
 .top-header .navbar-nav{
     align-items: start;
