@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Blog;
 use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -28,7 +29,8 @@ class BlogController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view ('admin.blog.create',compact('categories'));
+        $tags = Tag::all();
+        return view ('admin.blog.create',compact('categories','tags'));
     }
 
     /**
@@ -39,6 +41,8 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
+       
+
        
         $request->validate([
             'blog_title' => 'required',
@@ -53,11 +57,10 @@ class BlogController extends Controller
         $blogs->title = $request->blog_title;
         $blogs->category_id = $request->category_id;
 
-        if($request->has('tags')  && $request->tags){
-            $tags = implode(',',$request->tags);
-
-            $blogs->tags = $tags;
-        }
+        // if($request->has('tags')  && $request->tags){
+        //     $tags = implode(',',$request->tags);
+        //     $blogs->tags_id = $tags;
+        // }
 
         $blogs->banner = $request->banner;
         $blogs->short_description = $request->short_description;
@@ -68,7 +71,16 @@ class BlogController extends Controller
         $blogs->banner = $request->banner;
         $blogs->type = 1;
 
+       
+
         if($blogs->save()){
+
+            if ($request->has('tags') && $request->tags) {
+                $tags = $request->tags;
+                $blogs->tags()->attach($tags);
+            }
+
+
             $this->alert('success','Blog Added successfully','success');
             return redirect()->route('blog.index');
         }
@@ -96,6 +108,7 @@ class BlogController extends Controller
     public function edit(Blog $blog)
     {
         $categories = Category::all();
+
         return view('admin.blog.edit',['blogs' => $blog ,'categories' => $categories]);
     }
 
@@ -126,11 +139,13 @@ class BlogController extends Controller
         $blog->description = $request->description;
         $blog->meta_title = $request->meta_title;
 
-        if($request->has('tags')  && $request->tags){
-            $tags = implode(',',$request->tags);
+        // if($request->has('tags')  && $request->tags){
+        //     $tags = implode(',',$request->tags);
 
-            $blog->tags = $tags;
-        }
+          
+
+        //     $blog->tags_id = $tags;
+        // }
 
 
         $blog->meta_description = $request->meta_description;
@@ -140,6 +155,13 @@ class BlogController extends Controller
         $blog->banner = $request->banner;
         
         if($blog->save()){
+
+            if ($request->has('tags') && $request->tags) {
+                $tags = $request->tags;
+                $blog->tags()->sync($tags);
+            }
+
+
             $this->alert('success','Blog Updated successfully','success');
             return redirect()->route('blog.index');
         }

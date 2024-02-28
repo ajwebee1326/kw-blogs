@@ -32,7 +32,12 @@
                         <td>{{ \Carbon\Carbon::parse($blog->publish_date)->format('d M y') }}</td>
                         <td>{{$blog->title}}</td>
                         <td>{{$blog->category->name}}</td>
-                        <td>{{$blog->tags}}</td>
+                        {{-- <td>{{$blog->tags}}</td> --}}
+                        <td>
+                            @foreach($blog->tags as $tag)
+                                {{ $tag->name }}@if(!$loop->last), @endif
+                            @endforeach
+                        </td>
                         <td>
                         <a href="{{route('blog.edit', $blog->id)}}" class="btn btn-primary btn-sm">Edit</a>
                             <form action="{{route('blog.destroy',$blog->id)}}" method="POST" class="d-inline">
