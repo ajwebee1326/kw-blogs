@@ -74,12 +74,10 @@
                     <div class="col-md-6">
                         <label class="form-label" for="tags">Tags</label>
                         <select class="form-select" id="tags" name="tags[]" multiple="multiple">
-                            <option value="">Select Category</option>
-                            <option value="travel">Travel</option>
-                            <option value="technology">Technology</option>
-                            <option value="software">Software</option>
-                            <option value="cloudcomputing">Cloud Computing</option>
-                          
+                            <option value="">Select Tags</option>
+                            @foreach($tags as $tag) 
+                            <option value="{{ $tag->id }}">{{ $tag->name }}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>

@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\MetaController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\TagsController;
 
 
 use App\Http\Controllers\WebSiteController;
@@ -34,6 +35,18 @@ Route::group(['middleware' => 'auth','prefix'=>'/admin'], function () {
 
     Route::get('/dashboard', [DashboardController::class,'index'])->name('dashboard');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+
+
+
+    Route::get('/tags', [TagsController::class, 'index'])->name('tags');
+    Route::get('/tags/create', [TagsController::class, 'create'])->name('tags.create');
+    Route::post('/tags/store', [TagsController::class, 'store'])->name('tags.store');
+    Route::get('/tags/edit/{tags}', [TagsController::class, 'edit'])->name('tags.edit');
+    Route::delete('/tags/edit/{tags}', [TagsController::class, 'destroy'])->name('tags.destroy');
+    Route::put('/tags/update/{tags}', [TagsController::class, 'update'])->name('tags.update');
+    
+
 
     /*-------------------------------
 

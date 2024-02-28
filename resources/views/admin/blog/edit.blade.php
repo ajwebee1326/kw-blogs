@@ -76,27 +76,19 @@
                     </div>
                 </div>
                
-{{-- 
-                <div class="col-md-6">
-                  <label class="form-label" for="tags">Tags</label>
-                  <select class="form-select" id="tags" name="tags[]" multiple="multiple">
-                      <option value="">Select Category</option>
-                      <option value="travel">Travel</option>
-                      <option value="technology">Technology</option>
-                      <option value="software">Software</option>
-                      <option value="cloudcomputing">Cloud Computing</option>
-                    
-                  </select>
-              </div> --}}
 
               <div class="col-md-6">
                 <label class="form-label" for="tags">Tags</label>
                 <select class="form-select" id="tags" name="tags[]" multiple="multiple">
-                  <option value="">Select Category</option>
+                  {{-- <option value="">Select Category</option>
                   <option value="travel" {{ in_array('travel', explode(',', $blogs->tags)) ? 'selected' : '' }}>Travel</option>
                   <option value="technology" {{ in_array('technology', explode(',', $blogs->tags)) ? 'selected' : '' }}>Technology</option>
                   <option value="software" {{ in_array('software', explode(',', $blogs->tags)) ? 'selected' : '' }}>Software</option>
-                  <option value="cloudcomputing" {{ in_array('cloudcomputing', explode(',', $blogs->tags)) ? 'selected' : '' }}>Cloud Computing</option>
+                  <option value="cloudcomputing" {{ in_array('cloudcomputing', explode(',', $blogs->tags)) ? 'selected' : '' }}>Cloud Computing</option> --}}
+                  @foreach($blogs->tags as $tag)
+                  {{ $tag->name }}@if(!$loop->last), @endif
+              @endforeach
+                
                 </select>
             </div>
             
