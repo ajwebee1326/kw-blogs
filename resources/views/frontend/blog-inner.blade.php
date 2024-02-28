@@ -5,22 +5,23 @@
 
  <!--- Left Side --->
 
+
 <section class="blog sec-space">
     <div class="container">
         <div class="row">
             <div class="col-md-8 pe-md-4 pe-0">
                 <div class="blog-post-header">
                     <div class="blog-post-thumbnail">
-                        <img src="https://ness.themerex.net/wp-content/uploads/2023/07/image-25-copyright-1536x1024.jpg">
+                        <img src="{{$blog->thumbnail}}">
                     </div>
                     <div class="blog-post-category">
                         <a href="#">
                             <span class='bx bx-chevrons-right text-pink'></span>
-                            <span class="cat-name">Admission</span>
+                            <span class="cat-name">{{$blog->category->name}}</span>
                         </a>
                     </div>
                     <div class="blog-post-title">
-                        <h1>Undergraduate Tuition Fees Axed At All Universities In Germany</h1>
+                        <h1>{{$blog->title}}</h1>
                     </div>
                     <div class="blog-post-meta">
                         <div class="blog-post-author">
@@ -29,7 +30,7 @@
                         </div>
                         <div class="blog-post-date">
                             <span class='bx bx-chevrons-right text-yellow'></span>
-                            <span class="meta-value">Feb 20, 2024</span>
+                            <span class="meta-value">{{ \Carbon\Carbon::parse($blog->publish_date)->format('d M y') }}</span>
                         </div>
                         <div class="blog-post-comment">
                             <span class='bx bx-chevrons-right text-pink'></span>
@@ -38,34 +39,7 @@
                     </div>
                 </div>
                 <div class="blog-post-content">
-                    <p>With the start of the winter term comes very welcome news for those who study in Germany at
-                        degree level: undergraduate tuition fees at all universities in Germany have now been axed.
-                    </p>
-                    <p>Although the majority of the German states had already been offering low-cost or completely
-                        free tuition, only now, with the removal of fees in Lower Saxony, can the nation call itself
-                        completely free of tuition fees.</p>
-                    <p>One of the German states to scrap tuition fees as far back as 2012 was the state of Hamburg.
-                        Hamburg’s senator for science, Dorothee Stapelfeldt, explained to The Hornet the reasoning
-                        behind the move. “Tuition fees are socially unjust,” she said. “They particularly discourage
-                        young people who do not have a traditional academic family background from taking up
-                        studies. It is a core task of politics to ensure that young women and men can study with a
-                        high quality standard free of charge in Germany.”</p>
-                        <blockquote class="blog-quote">
-                            <p>Curabitur varius eros et lacus rutrum consequat. Mauris sollicitudin enim condimentum, luctus justo non, molestie nisl. </p>
-                        </blockquote>
-                    <h2 class="heading-block">No fees for international students, but some for postgraduates</h2>
-                    <p>With the start of the winter term comes very welcome news for those who study in Germany at
-                        degree level: undergraduate tuition fees at all universities in Germany have now been axed.
-                    </p>
-                    <p>Although the majority of the German states had already been offering low-cost or completely
-                        free tuition, only now, with the removal of fees in Lower Saxony, can the nation call itself
-                        completely free of tuition fees.</p>
-                    <p>One of the German states to scrap tuition fees as far back as 2012 was the state of Hamburg.
-                        Hamburg’s senator for science, Dorothee Stapelfeldt, explained to The Hornet the reasoning
-                        behind the move. “Tuition fees are socially unjust,” she said. “They particularly discourage
-                        young people who do not have a traditional academic family background from taking up
-                        studies. It is a core task of politics to ensure that young women and men can study with a
-                        high quality standard free of charge in Germany.”</p>
+                        {!! $blog->description !!}
                 </div>
                 <div class="blog-post-footer">
                     <div class="row align-items-center">
@@ -73,19 +47,7 @@
                             <div class="blog-post-tag">
                                 <a href="#">
                                     <span class="tag-shape">#</span>
-                                    <span class="tag-name">campus</span>
-                                </a>
-                                <a href="#">
-                                    <span class="tag-shape">#</span>
-                                    <span class="tag-name">career</span>
-                                </a>
-                                <a href="#">
-                                    <span class="tag-shape">#</span>
-                                    <span class="tag-name">Business</span>
-                                </a>
-                                <a href="#">
-                                    <span class="tag-shape">#</span>
-                                    <span class="tag-name">Learning</span>
+                                    <span class="tag-name">{{$blog->tags}}</span>
                                 </a>
                             </div>
                         </div>
@@ -96,16 +58,16 @@
                                     <div class="post-share-media">
                                         <span class=' share-icon bx bx-share-alt'></span>
                                         <div class="share-list">
-                                            <a href="#">
+                                            <a href="https://twitter.com/?lang=en">
                                                 <span class='bx bxl-twitter'></span>
                                             </a>
-                                            <a href="#">
+                                            <a href="https://www.facebook.com/reel/1411633062763319">
                                                 <span class='bx bxl-facebook'></span>
                                             </a>
-                                            <a href="#">
+                                            <a href="https://www.instagram.com/">
                                                 <span class='bx bxl-instagram'></span>
                                             </a>
-                                            <a href="#">
+                                            <a href="https://www.linkedin.com/checkpoint/lg/sign-in-another-account?trk=guest_homepage-basic_nav-header-signin">
                                                 <span class='bx bxl-linkedin'></span>
                                             </a>
                                             <a href="#">
@@ -210,22 +172,24 @@
                                 <div class="blog-search-title widget-title">
                                     <span>Recent Post</span>
                                 </div>
+                                
                                 <div class="recent-post-item">
                                     <div class="recent-post-thumbnail">
-                                        <a href=""><img src="https://ness.themerex.net/wp-content/uploads/2023/07/image-35-copyright-120x120.jpg" alt=""></a>
+                                        <a href="{{ route('viewBlogInner', ['id' => $recentBlog->id]) }}"><img src="{{$recentBlog->thumbnail}}" alt="thumbnail"></a>
                                     </div>
                                     <div class="recent-post-content">
                                         <div class="recent-post-meta">
                                             <div class="recent-post-category">
-                                                <a href="">Experience</a>
+                                                <a href="{{ route('viewBlogInner', ['id' => $recentBlog->id]) }}">{{$recentBlog->category->name}}</a>
                                             </div>
-                                            <div class="recent-post-date">26feb 2024</div>
+                                            <div class="recent-post-date">{{ \Carbon\Carbon::parse($blog->publish_date)->format('d M y') }}</div>
                                         </div>
                                         <div class="recent-post-title">
-                                        <h6>What are branded hashtags and how to use them</h6>
+                                        <h6>{{$recentBlog->title}}</h6>
                                     </div>
                                     
                                 </div>
+                               
                                 
                             </div>
                             <div id="category" class="blog-category">
@@ -233,48 +197,15 @@
                                     <span>Category</span>
                                 </div>
                                 <ul>
+
+                                    @foreach($categoryies as $category)
                                     <li class="cat-item">
                                         <a href="">
-                                            Admission
-                                            <span class="count">(6)</span>
+                                            {{$category->name}}
+                                            <span class="count">({{$category->blog->count()}})</span>
                                         </a>
                                     </li>
-                                    <li class="cat-item">
-                                        <a href="">
-                                            Learning
-                                            <span class="count">(5)</span>
-                                        </a>
-                                    </li>
-                                    <li class="cat-item">
-                                        <a href="">
-                                           Business
-                                            <span class="count">(3)</span>
-                                        </a>
-                                    </li>
-                                    <li class="cat-item">
-                                        <a href="">
-                                          Development
-                                            <span class="count">(2)</span>
-                                        </a>
-                                    </li>
-                                    <li class="cat-item">
-                                        <a href="">
-                                            Learning
-                                            <span class="count">(5)</span>
-                                        </a>
-                                    </li>
-                                    <li class="cat-item">
-                                        <a href="">
-                                           Business
-                                            <span class="count">(3)</span>
-                                        </a>
-                                    </li>
-                                    <li class="cat-item">
-                                        <a href="">
-                                          Development
-                                            <span class="count">(2)</span>
-                                        </a>
-                                    </li>
+                                    @endforeach
                                 </ul>
 
                             </div>
@@ -311,8 +242,6 @@
         </div>
     </div>
 </section>
- 
-
 
 <div class="container">
     <div class="row">

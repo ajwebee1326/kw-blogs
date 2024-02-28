@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Meta;
 use App\Models\Blog;
 use App\Models\ContactUs;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -44,10 +45,12 @@ class WebSiteController extends Controller
       return view('frontend.blog', compact('blogs')); 
     }
 
-    public function viewBlogInner(){ 
-
-      
-        return view('frontend.blog-inner');
+    public function viewBlogInner($id){ 
+       
+        $categoryies = Category::all();
+        $recentBlog = Blog::latest()->first();
+        $blog = Blog::findOrFail($id);        
+        return view('frontend.blog-inner',compact('blog','categoryies','recentBlog'));
     }
 
     public function viewContactUs(Request $request) {
