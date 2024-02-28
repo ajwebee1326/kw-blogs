@@ -91,7 +91,7 @@
     <div class="row">
         <div class="col-md-8 mx-auto">
             <div class="row">
-                <div class="col-md-4 mb-4 mb-md-0">
+                <div class="col-md-12 col-lg-12 col-xl-4 col-12 mb-4 mb-md-0">
                     <div class="contact-details text-center">
                         <div>
                             <span class="bx bx-envelope"></span>
@@ -105,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4 mb-md-0">
+                <div class="col-md-12 col-lg-12 col-xl-4 col-12 mb-4 mb-md-0">
                     <div class="contact-details text-center">
                         <div>
                             <span class="bx bx-map"></span>
@@ -119,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-12 col-lg-12 col-xl-4 col-12">
                 <div class="contact-details text-center">
                         <div>
                             <span class="bx bx-phone"></span>
