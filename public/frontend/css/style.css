@@ -511,6 +511,7 @@ label strong {
 
 /*--- Responsive styles ---*/
 @media(max-width:991px) {
+
 .top-header{
     padding: 0;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.07);
@@ -755,8 +756,8 @@ label strong {
 }
 
 .blog h1 {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 40px;
+    line-height: 50px;
     margin-bottom: 15px;
     text-transform: capitalize;
 }
@@ -770,6 +771,28 @@ label strong {
 .blog h3 {
     font-size: 24px;
     line-height: 34px;
+    
+}
+.blog-post-content h2{
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+.blog-post-content h3{
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 15px;
+}
+.blog-post-content h4{
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 15px;
+}
+.blog-post-content img{
+ margin-bottom: 15px;
+}
+.blog-post-content p{
+    margin-bottom: 15px;
 }
 
 .blog .blog-post-header {
@@ -1073,18 +1096,18 @@ label strong {
   font-size: 20px;
 }
 /*--- Block Quote ----*/
-.blog-quote{
+blockquote{
     border-left: 2px solid  var(--bg-secondary);
     padding: 30px;
     margin: 30px 0;
     background-color: var(--bg-light);
 }
-.blog-quote::before{
+blockquote::before{
     content: "\f10d";
     font-family: 'FontAwesome';
     color: var(--bg-secondary);
 }
-.blog-quote p{
+blockquote p{
     font-size: 20px;
     line-height: 30px;
     padding: 0 0 0 15px;
@@ -1263,4 +1286,36 @@ label strong {
 .bs-tooltip-bottom .tooltip-arrow::before,
 .bs-tooltip-auto[x-placement^="bottom"] .tooltip-arrow::before {
     border-bottom-color: var(--bg-secondary) !important;
+}
+/*---- Contact Us ---*/
+.contact-us{
+    border: 1px solid #000;
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 3px 3px 0 0 #000 ;
+}
+.contact-details span{
+    display: inline-block;
+    background-color: var(--bg-secondary);
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    border: 1px solid var(--bg-secondary);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 30px;
+    box-shadow: 3px 3px 0 0 var(--bg-primary) ;
+}
+.col-md-4:nth-child(2) .contact-details span{
+    background-color: var(--bg-pink);
+    border: 1px solid var(--bg-pink);
+    box-shadow: 3px 3px 0 0 var(--bg-primary) ;
+
+}
+.contact-details h5{
+    margin-top: 20px;
+    font-weight: 600;
+}
+.contact-details a{
+    color: var(--primary);
 }

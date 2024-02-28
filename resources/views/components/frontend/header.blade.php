@@ -43,7 +43,7 @@
                         <a class="nav-link" href="{{route('viewBlog')}}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#subscribeModal">Contact Us</a>
+                        <a class="nav-link" href="{{route('viewContactUsPage')}}">Contact Us</a>
                     </li>
 
 

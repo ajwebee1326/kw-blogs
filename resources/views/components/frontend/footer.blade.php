@@ -28,7 +28,7 @@
                     </div>         
                     <div class="col-md-12 col-xl-7 col-lg-12 col-12">
                         <form class="row  align-items-center news-letter">
-                            <div class="col-md-12 col-xl-7 col-lg-12 col-12 mb-xl-3 mb-3 mb-lg-3">
+                            <div class="col-md-12 col-xl-7 col-lg-12 col-12 mb-md-0 mb-xl-0 mb-3 mb-md-3 mb-lg-0">
                                 <input type="text" class="form-control " id="" placeholder="Enter Your Email Address">
                                 </div>
                             <div class="col-md-12 col-xl-5 col-lg-12 col-12 mb-lg-3 mb-xl-0 mb-3">

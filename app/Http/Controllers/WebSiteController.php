@@ -53,6 +53,9 @@ class WebSiteController extends Controller
         return view('frontend.blog-inner',compact('blog','categoryies','recentBlog'));
     }
 
+    public function viewContactUsPage(){
+        return view('frontend.contact-us');
+    }
     public function viewContactUs(Request $request) {
 
         $request->validate([
