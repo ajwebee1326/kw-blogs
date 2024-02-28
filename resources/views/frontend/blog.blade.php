@@ -30,7 +30,7 @@
                                     <div class="post-description">
                                         <div class="post-meta">
                                             <div class="post-date">
-                                                    <a href="{{ route('viewBlogInner', ['id' => $blog->id]) }}">{{ \Carbon\Carbon::parse($blog->publish_date)->format('d M y') }}</a>                                                
+                                                    <a href="{{ route('viewBlogInner', $blog->slug) }}">{{ \Carbon\Carbon::parse($blog->publish_date)->format('d M y') }}</a>                                                
                                                             {{-- <a href="" class="post-comment">
                                                                 <span class="post-meta-number">0</span>
                                                                 <span class="post-meta-label">comment</span>
@@ -38,8 +38,8 @@
                                             </div>
                                         </div>
                                         <h4 class="post-title">
-                                            <a href="{{ route('viewBlogInner', ['id' => $blog->id]) }}">{{$blog->title}}</a>
-                                            <span class="arrow-hover"></span>
+                                            <a href="{{ route('viewBlogInner', $blog->slug) }}">{{$blog->title}}</a>
+                                            Read More <span class="arrow-hover"></span>
                                         </h4>
                                         <a href="" class="post-link"></a>
                                     </div>
@@ -48,6 +48,7 @@
                         </div>
                     </div>
                 @endforeach
+                {{ $blogs->links() }}
             </div>
         </div>
     </div>

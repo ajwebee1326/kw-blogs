@@ -40,17 +40,22 @@ class WebSiteController extends Controller
 
     public function viewBlog(){
 
-        $blogs = Blog::all();
+        $blogs = Blog::paginate(1);
 
       return view('frontend.blog', compact('blogs')); 
     }
 
-    public function viewBlogInner($id){ 
+    public function viewBlogInner($slug){ 
        
         $categoryies = Category::all();
         $recentBlog = Blog::latest()->first();
-        $blog = Blog::findOrFail($id);        
-        return view('frontend.blog-inner',compact('blog','categoryies','recentBlog'));
+        $blog = Blog::where('slug',$slug)->first();
+        
+        $related_blogs = Blog::where('category_id',$blog->category_id)
+        ->where('id','!=',$blog->id)
+        ->limit(2)->get();
+
+        return view('frontend.blog-inner',compact('blog','categoryies','recentBlog','related_blogs'));
     }
 
     public function viewContactUsPage(){
