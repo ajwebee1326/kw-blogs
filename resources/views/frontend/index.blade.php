@@ -38,7 +38,7 @@
     <section class="sec-content sec-space">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 mb-md-0 mb-4">
+                <div class=" col-xl-4 col-lg-12 col-md-12 mb-md-4 mb-lg-0 mb-4">
                     <div class="card">
                         <img src="{{asset('frontend')}}/images/1.gif" alt="animated-gif-content">
                         <div>
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-md-0 mb-4">
+                <div class="col-xl-4 col-lg-12 col-md-12 mb-md-4 mb-lg-0 mb-4">
                     <div class="card">
                         <img src="{{asset('frontend')}}/images/2.gif" alt="animated-gif-content2">
                         <div>
@@ -58,7 +58,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-xl-4 col-lg-12 col-md-12">
                     <div class="card">
                         <img src="{{asset('frontend')}}/images/3.gif" alt="animated-gif-content3">
                         <div>
@@ -108,7 +108,7 @@
     <div class="bg-light sec-space sec-space-m">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-10 mx-auto">
                     <div class="join-us text-center">
                         <p class="mb-0 sub-text">Ready to join a buzzing community of like-minded pros where creativity thrives? Dive in with our newsletter for an exclusive pass!</p>
                         <button class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</button>
@@ -129,7 +129,7 @@
                                     <form method="POST" action="{{route('viewContactUs')}}">
                                         @csrf
                                         <div class="row">
-                                            <div class="col-md-6 mb-4">
+                                            <div class="col-6 mb-4">
                                                 <div class="form-group">
                                                    <label for="" class="pb-2"><strong>Full Name</strong></label>
                                                     <input type="text" class="form-control" id="name" placeholder="Enter Your Full Name" required>
@@ -137,21 +137,21 @@
                                                 </div>
                                             </div>
                                             
-                                            <div class="col-md-6 mb-4">
+                                            <div class="col-6 mb-4">
                                                 <div class="form-group">
                                                     <label for="" class="pb-2"><strong>Email</strong></label>
                                                     <input type="email" class="form-control" id="email" placeholder="Work Email" required>
                                                  
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 mb-4">
+                                            <div class="col-6 mb-4">
                                                 <div class="form-group">
                                                     <label class="pb-2"><strong>Company Name</strong></label>
                                                     <input type="text" class="form-control" id="number" placeholder="Enter Your Company Name" required>
                                                     
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 mb-4">
+                                            <div class="col-6 mb-4">
                                                 <div class="form-group">
                                                     <label for="" class="pb-2"><strong>Phone No</strong></label>
                                                     <input type="number" class="form-control" id="number" placeholder="Enter Your Number" required>
@@ -166,7 +166,7 @@
                                             </div>
                                            
                                             
-                                            <div class="col-md-6 mx-auto">
+                                            <div class="col-6 mx-auto">
                                                 <Button class="btn btn-primary btn-subscribe" >Subscribe</Button>
                                             </div>
                                         </div>
