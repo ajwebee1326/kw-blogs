@@ -43,6 +43,17 @@ It is just to check the uri segment value so that we can activate the currenct s
         </a>
       </li>
 
+      <!-- Tags --> 
+
+      <li class="menu-item {{Request::segment(2)=='tags' ? 'menu-item active' : ''}}">
+        <a href="{{route('tags')}}" class="menu-link ">
+          <i class="menu-icon tf-icons bx bx-file"></i>
+          <div data-i18n="Layouts">Tags</div>
+        </a>
+      </li>
+
+
+
        <!-- Blogs  -->
        <li class="menu-item {{Request::segment(2)== 'blog' ? 'menu-item active' : ''}}">
         <a href="javascript:void(0);" class="menu-link menu-toggle">

@@ -21,13 +21,15 @@ return new class extends Migration
             $table->mediumText('slug')->unique();
             $table->unsignedBigInteger('category_id');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->mediumText('tags')->nullable();
+            // $table->mediumText('tags')->nullable();
+
+            // $table->unsignedBigInteger('tags_id')->nullable();
+            // $table->foreign('tags_id')->references('id')->on('tags')->onDelete('cascade');
+
             $table->mediumText('banner')->default('default.jpg');
             $table->mediumText('thumbnail')->default('default.jpg');
             $table->string('meta_title')->nullable();
             $table->mediumText('meta_description')->nullable();
-            // $table->mediumText('og_title')->nullable();
-            // $table->mediumText('og_image')->nullable();
             $table->boolean('is_published')->default(true);
             $table->integer('type')->default(1)->comment('1: Blog, 2: News, 3: Work');
             $table->date('publish_date')->nullable();
