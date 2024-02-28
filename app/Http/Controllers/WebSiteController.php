@@ -6,6 +6,7 @@ use App\Models\Meta;
 use App\Models\Blog;
 use App\Models\ContactUs;
 use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -50,12 +51,14 @@ class WebSiteController extends Controller
         $categoryies = Category::all();
         $recentBlog = Blog::latest()->first();
         $blog = Blog::where('slug',$slug)->first();
+
+        $tags = Tag::all();
         
         $related_blogs = Blog::where('category_id',$blog->category_id)
         ->where('id','!=',$blog->id)
         ->limit(2)->get();
 
-        return view('frontend.blog-inner',compact('blog','categoryies','recentBlog','related_blogs'));
+        return view('frontend.blog-inner',compact('blog','categoryies','recentBlog','related_blogs','tags'));
     }
 
     public function viewContactUsPage(){
