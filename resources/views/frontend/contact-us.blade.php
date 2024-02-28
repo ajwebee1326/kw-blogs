@@ -115,7 +115,7 @@
                             <p>Come Say hello to our office HQ</p>
                         </div>
                         <div>
-                            <a href="">250 Consumers Road North York, ON M2J 4V6 Canada</a>
+                            <a href="">250 Consumers Road North York, ON M2J 4V6 Canada.</a>
                         </div>
                     </div>
                 </div>
