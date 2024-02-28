@@ -61,10 +61,12 @@
                     <div class="row align-items-center">
                         <div class="col-md-6">
                             <div class="blog-post-tag">
+                                @foreach ($blog->tags as $tag)
                                 <a href="#">
                                     <span class="tag-shape">#</span>
-                                    <span class="tag-name">{{$blog->tags}}</span>
+                                    <span class="tag-name">{{$tag->name}}</span>
                                 </a>
+                                @endforeach
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -206,9 +208,13 @@
                                 <div class="blog-search-title widget-title">
                                     <span>Popular Tag</span>
                                 </div>
+
+                                @foreach ($tags as $tag)
                                 <div class="multi-tag">
-                                    <a href="" class="tag-link">Activity</a>
-                                    <a href="" class="tag-link">Business</a>
+                                    <a href="" class="tag-link">{{$tag->name}}</a>
+
+                                    {{-- {{ $tag->name }}@if(!$loop->last), @endif --}}
+                                    {{-- <a href="" class="tag-link">Business</a>
                                     <a href="" class="tag-link">Career</a>
                                     <a href="" class="tag-link">Career</a>
                                     <a href="" class="tag-link">Career</a>
@@ -224,8 +230,9 @@
                                     <a href="" class="tag-link">Career</a>
                                     <a href="" class="tag-link">Career</a>
                                     <a href="" class="tag-link">Career</a>
-                                    <a href="" class="tag-link">Marketing</a>
+                                    <a href="" class="tag-link">Marketing</a> --}}
                                 </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
