@@ -8,6 +8,8 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
             rel="stylesheet">
+            <!--- Favicon ----->
+        <link rel="icon" href="{{asset('frontend')}}/images/fav.jpg" sizes="32x32" />
         <!--- Fonts Awesome --->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

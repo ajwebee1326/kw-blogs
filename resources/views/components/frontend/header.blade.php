@@ -14,8 +14,8 @@
                                 Inbox peekaboo: Want Love letters. Want spam?"></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><img src="{{asset('frontend')}}/images/user-icon.png" class="secondary-tooltip" alt="user" data-bs-toggle="tooltip" data-bs-placement="bottom" title="
-                                Virtual high-five awaits! 🖐️"></a>
+                            <a class="nav-link" href="#"><span class="secondary-tooltip bx bxs-user-plus" alt="user" data-bs-toggle="tooltip" data-bs-placement="bottom" title="
+                                Virtual high-five awaits! 🖐️"></span></a>
                         </li>
                 </ul>
             </div>
@@ -36,9 +36,9 @@
                             Inbox peekaboo: Want Love letters. Want spam?"></span></a>
                     </li>
                     <li class="nav-item nav-small">
-                        <a class="nav-link" href="#"><img src="{{asset('frontend')}}/images/user-icon.png" class="secondary-tooltip" alt="user" data-bs-toggle="tooltip" data-bs-placement="bottom" title="
-                            Virtual high-five awaits! 🖐️"></a>
-                    </li>
+                            <a class="nav-link" href="#"><span class="secondary-tooltip bx bxs-user-plus" alt="user" data-bs-toggle="tooltip" data-bs-placement="bottom" title="
+                                Virtual high-five awaits! 🖐️"></span></a>
+                        </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('viewBlog')}}">Blog</a>
                     </li>
