@@ -29,6 +29,26 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+  
+        var currentUrl = window.location.href;
+
+        var navItems = document.querySelectorAll('.navbar-nav .nav-item');
+
+        navItems.forEach(function(item) {
+        
+            var link = item.querySelector('.nav-link');
+
+            var href = link.getAttribute('href');
+
+        
+            if (currentUrl.includes(href)) {
+                item.classList.add('active');
+            }
+        });
+   </script>
+
+    </script>
     
     @yield('scripts')
 </body>
