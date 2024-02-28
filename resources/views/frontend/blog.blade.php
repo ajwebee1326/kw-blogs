@@ -39,9 +39,10 @@
                                         </div>
                                         <h4 class="post-title">
                                             <a href="{{ route('viewBlogInner', $blog->slug) }}">{{$blog->title}}</a>
-                                            Read More <span class="arrow-hover"></span>
                                         </h4>
-                                        <a href="" class="post-link"></a>
+                                       <div class="arrow-hover">
+                                         <a href="{{ route('viewBlogInner', $blog->slug) }}" class="post-link">Read More</a>
+                                       </div>
                                     </div>
                                 </div>
                             </div>

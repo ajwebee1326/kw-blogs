@@ -7,25 +7,26 @@
 
  <!--- Left Side --->
 
-
-<section class="blog sec-space">
+<section class="blog-top-header">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 pe-md-4 pe-0">
-                <div class="blog-post-header">
-                    <div class="blog-post-thumbnail">
-                        <img src="{{$blog->banner}}">
-                    </div>
-                    <div class="blog-post-category">
-                        <a href="#">
-                            <span class='bx bx-chevrons-right text-pink'></span>
-                            <span class="cat-name">{{$blog->category->name}}</span>
-                        </a>
-                    </div>
-                    <div class="blog-post-title">
+            <div class="col-12">
+                <div class="blog-post-banner">
+                    <img src="{{$blog->banner}}">
+                </div>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="blog-post-category">
+                    <a href="#">
+                        <span class="cat-name">{{$blog->category->name}}</span>
+                    </a>
+                </div>
+                <div class="blog-post-title mt-3">
                         <h1>{{$blog->title}}</h1>
-                    </div>
-                    <div class="blog-post-meta">
+                </div>
+                <div class="blog-post-meta mt-3">
                         <div class="blog-post-author">
                             <span class='bx bx-chevrons-right text-secondary'></span>
                             <span class="meta-value">Webeesocial</span>
@@ -38,6 +39,19 @@
                             <span class='bx bx-chevrons-right text-pink'></span>
                             <span class="meta-value">0 Comments</span>
                         </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="blog sec-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-12 col-md-12 col-xl-8 pe-md-4 pe-0">
+                <div class="blog-post-header">
+                    <div class="blog-post-thumbnail">
+                        <img src="{{$blog->banner}}">
                     </div>
                 </div>
                 <div class="blog-post-content">
@@ -128,7 +142,7 @@
                 </div>
 
             </div>
-            <div class="col-md-4">
+            <div class="col-md-12 col-12 col-lg-12 col-xl-4">
                 <!--- Right Sidebar--->
                 <div class="blog-sidebar">
                     <div class="page-sidebar-inner">

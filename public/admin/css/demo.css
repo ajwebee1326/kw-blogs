@@ -2,7 +2,17 @@
 * demo.css
 * File include item demo only specific css only
 ******************************************************************************/
+:root {
+  --primary: #000;
+  --secondary: #fff;
+  --bg-primary: #fdd63a;
+  --bg-secondary: #7406ff;
+  --bg-pink: #f83890;
+  --grey: #717579;
+  --bg-light: #f0f0f0;
 
+
+}
 .menu .app-brand.demo {
   height: 64px;
   margin-top: 12px;
@@ -110,3 +120,36 @@
 .app-brand .app-brand-link img{
   width: 180px;
 }
+/*---- New style -----*/
+div .btn-primary{
+  background-color: var(--bg-primary);
+  border: 1px solid var(--bg-primary);
+  color: var(--primary);
+  box-shadow: none;
+
+}
+div .btn-primary:hover{
+  background-color: var(--bg-pink);
+  border: 1px solid var(--bg-pink);
+  color: var(--secondary);
+  transform: translateY(0);
+}
+ div .btn-danger{
+  box-shadow: none;
+ }
+ div .btn-danger:hover{
+  transform: translateY(0);
+ }
+ div .bg-menu-theme .menu-inner > .menu-item.active > .menu-link {
+  color: var(--bg-secondary);
+ }
+ div .bg-menu-theme .menu-inner > .menu-item.active:before {
+  background-color: var(--bg-secondary);
+ }
+ div .bg-footer-theme .footer-link{
+  color: var(--bg-secondary);
+  font-weight: 600;
+ }
+ div .bg-footer-theme .footer-link:hover{
+  color: var(--bg-pink);
+ }
