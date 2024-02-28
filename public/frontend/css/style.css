@@ -1178,6 +1178,7 @@ label strong {
     transition:  all ease .5s;
 }
 .recent-post-thumbnail img{
+    max-width:150px;
     width: 100%;
     transition:  all ease .5s;
     transform: scale(1,1);

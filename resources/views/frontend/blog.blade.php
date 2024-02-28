@@ -20,86 +20,51 @@
     <div class="container">
         <div class="blog-wrap grid-style">
             <div class="row">
-            @foreach ($blogs as $blog) 
-                <div class="col-md-4">
-                    <div class="blog-post-item">
-                        <div class="blog-post-thumbnail">
-                            <img src="{{$blog->thumbnail}}" alt="post-thumbnail">
-                            <div class="post-mask"></div>
-                            <div class="post-info">
-                                <div class="post-description">
-                                    <div class="post-meta">
-                                        <div class="post-date">
-                                                <a href="{{ route('viewBlogInner', ['id' => $blog->title]) }}">{{ \Carbon\Carbon::parse($blog->publish_date)->format('d M y') }}</a>
-                                                
-                                        {{-- <a href="" class="post-comment">
-                                            <span class="post-meta-number">0</span>
-                                            <span class="post-meta-label">comment</span>
-                                        </a> --}}
-                                    </div>
-                                </div>
-                                <h4 class="post-title"><a href="{{route('viewBlogInner')}}">{{$blog->title}}</a>
-                            <span class="arrow-hover"></span></h4>
-                                <a href="" class="post-link"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-                {{-- <div class="col-md-4">
-                    <div class="blog-post-item">
-                        <div class="blog-post-thumbnail">
-                            <img src="https://ness.themerex.net/wp-content/uploads/2023/07/image-25-copyright-890x664.jpg" alt="post-thumbnail">
-                            <div class="post-mask"></div>
-                            <div class="post-info">
-                                <div class="post-description">
-                                    <div class="post-meta">
-                                        <div class="post-date">
-                                            <span>
-                                            <a href="">26 Feb 2024</a>
-                                            </span>
+                @foreach ($blogs as $blog) 
+                    <div class="col-md-4">
+                        <div class="blog-post-item">
+                            <div class="blog-post-thumbnail">
+                                <img src="{{$blog->thumbnail}}" alt="post-thumbnail">
+                                <div class="post-mask"></div>
+                                <div class="post-info">
+                                    <div class="post-description">
+                                        <div class="post-meta">
+                                            <div class="post-date">
+                                                    <a href="{{ route('viewBlogInner', ['id' => $blog->id]) }}">{{ \Carbon\Carbon::parse($blog->publish_date)->format('d M y') }}</a>                                                
+                                                            {{-- <a href="" class="post-comment">
+                                                                <span class="post-meta-number">0</span>
+                                                                <span class="post-meta-label">comment</span>
+                                                            </a> --}}
+                                            </div>
                                         </div>
-                                        <a href="" class="post-comment">
-                                            <span class="post-meta-number">0</span>
-                                            <span class="post-meta-label">comment</span>
-                                        </a>
+                                        <h4 class="post-title">
+                                            <a href="{{ route('viewBlogInner', ['id' => $blog->id]) }}">{{$blog->title}}</a>
+                                            <span class="arrow-hover"></span>
+                                        </h4>
+                                        <a href="" class="post-link"></a>
                                     </div>
                                 </div>
-                                <h4 class="post-title"><a href="">Ramp up sales with a creative promotion</a>
-                            <span class="arrow-hover"></span></h4>
-                                <a href="" class="post-link"></a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="blog-post-item">
-                        <div class="blog-post-thumbnail">
-                            <img src="https://ness.themerex.net/wp-content/uploads/2023/07/image-25-copyright-890x664.jpg" alt="post-thumbnail">
-                            <div class="post-mask"></div>
-                            <div class="post-info">
-                                <div class="post-description">
-                                    <div class="post-meta">
-                                        <div class="post-date">
-                                            <a href="">26 Feb 2024</a>
-                                        </div>
-                                        <a href="" class="post-comment">
-                                            <span class="post-meta-number">0</span>
-                                            <span class="post-meta-label">comment</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                <h4 class="post-title"><a href="">Ramp up sales with a creative promotion</a>
-                            <span class="arrow-hover"></span></h4>
-                                <a href="" class="post-link"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
+                @endforeach
             </div>
         </div>
     </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

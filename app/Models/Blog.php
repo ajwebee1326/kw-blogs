@@ -20,4 +20,9 @@ class Blog extends Model
         return ucfirst($value);
     }
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
 }

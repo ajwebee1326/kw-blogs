@@ -1,7 +1,7 @@
 <header class="top-header">
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="index.php"><img src="{{asset('frontend')}}/images/logo.png" alt="kakewalk"></a>
+            <a class="navbar-brand" href="{{route('viewIndex')}}"><img src="{{asset('frontend')}}/images/logo.png" alt="kakewalk"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
