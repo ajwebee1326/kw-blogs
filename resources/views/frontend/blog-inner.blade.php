@@ -1,6 +1,8 @@
 @extends('frontend.layouts.app')
 
 
+@section('title',$blog->meta_title)
+
 @section('content')
 
  <!--- Left Side --->
@@ -12,7 +14,7 @@
             <div class="col-md-8 pe-md-4 pe-0">
                 <div class="blog-post-header">
                     <div class="blog-post-thumbnail">
-                        <img src="{{$blog->thumbnail}}">
+                        <img src="{{$blog->banner}}">
                     </div>
                     <div class="blog-post-category">
                         <a href="#">
@@ -26,7 +28,7 @@
                     <div class="blog-post-meta">
                         <div class="blog-post-author">
                             <span class='bx bx-chevrons-right text-secondary'></span>
-                            <span class="meta-value">Himanshu</span>
+                            <span class="meta-value">Webeesocial</span>
                         </div>
                         <div class="blog-post-date">
                             <span class='bx bx-chevrons-right text-yellow'></span>
@@ -84,11 +86,13 @@
                     <h3 class="related-post-title">You May Also Like</h3>
                     <div class="post-slider">
                         <div class="row">
+
+                            @foreach($related_blogs as $blog)
                             <div class="col-md-6">
                                 <div class="post-slider-item">
                                     <div class=" post-wrap card">
                                         <div class="post-wrap-thumbnail">
-                                            <img src="https://unicamp-4437.kxcdn.com/main/wp-content/uploads/sites/2/2021/01/blog-11-240x150.jpg"
+                                            <img src="{{ $blog->thumbnail }}"
                                                 class="card-img-top" alt="...">
 
                                         </div>
@@ -97,15 +101,17 @@
                                                 <div class="blog-post-category">
                                                     <a href="#">
                                                         <span class='bx bx-chevrons-right text-pink'></span>
-                                                        <span class="cat-name">Admission</span>
+                                                        <span class="cat-name">{{ $blog->category->name }}</span>
                                                     </a>
                                                 </div>
                                                 <h6 class="post-title">
-                                                    <a href="#">Gender inequality in higher education persists</a>
+                                                    <a href="{{ route('viewBlogInner',$blog->slug) }}">{{ $blog->title  }}</a>
                                                 </h6>
                                                 <div class="post-meta">
                                                     <div class="post-date">
-                                                        <span>Jan 22, 2021</span>
+                                                        <span>
+                                                           {{ \Carbon\Carbon::parse($blog->publish_date)->format('d,M Y') }}
+                                                        </span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -113,35 +119,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
-                                <div class="post-slider-item">
-                                    <div class=" post-wrap card">
-                                        <div class="post-wrap-thumbnail">
-                                            <img src="https://unicamp-4437.kxcdn.com/main/wp-content/uploads/sites/2/2021/01/blog-11-240x150.jpg"
-                                                class="card-img-top" alt="...">
+                            @endforeach
 
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="post-caption">
-                                                <div class="blog-post-category">
-                                                    <a href="#">
-                                                        <span class='bx bx-chevrons-right text-pink'></span>
-                                                        <span class="cat-name">Admission</span>
-                                                    </a>
-                                                </div>
-                                                <h6 class="post-title">
-                                                    <a href="#">Gender inequality in higher education persists</a>
-                                                </h6>
-                                                <div class="post-meta">
-                                                    <div class="post-date">
-                                                        <span>Jan 22, 2021</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

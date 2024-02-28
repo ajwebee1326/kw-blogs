@@ -3,7 +3,7 @@
  <footer class="sec-space footer-sec  sec-space-m">
     <div class="container">
         <div class="row">
-            <div class="col-md-5 pe-3 pb-3 pb-md-0">
+            <div class="col-md-12 col-xl-5 col-lg-12 col-12  mb-lg-3 mb-xl-0 mb-3">
                 <div class="footer-description">
                     <img src="{{asset('frontend')}}/images/logo white.png" alt="footer-logo" class="mb-3">
                     <div class="footer-copyright mt-2">
@@ -18,29 +18,29 @@
                     </div>
                 </div>
             </div>
-         <div class="col-md-7">
+         <div class="col-md-12 col-xl-7 col-lg-12 col-12">
                <div class="row pb-md-0 pb-3">
-                    <div class="col-md-5">
+                    <div class="col-md-12 col-xl-5 col-lg-12 col-12">
                         <div class="footer-list">
                             <h5>Newsletter Signup</h5>
                             <p>Sign up to our exclusive marketing newsletter!</p>
                         </div>
                     </div>         
-                    <div class="col-md-7">
+                    <div class="col-md-12 col-xl-7 col-lg-12 col-12">
                         <form class="row  align-items-center news-letter">
-                            <div class="col-md-7 mb-md-0 mb-3">
+                            <div class="col-md-12 col-xl-7 col-lg-12 col-12 mb-xl-3 mb-3 mb-lg-3">
                                 <input type="text" class="form-control " id="" placeholder="Enter Your Email Address">
                                 </div>
-                            <div class="col-md-5">
+                            <div class="col-md-12 col-xl-5 col-lg-12 col-12 mb-lg-3 mb-xl-0 mb-3">
                                 <button type="submit" class="btn btn-primary btn-subscribe">Submit</button>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-12 col-xl-5 col-lg-12 col-12">
                         <div class="footer-list">
-                            <h5 class="pb-3 mt-md-3">Follow Us</h5>
+                            <h5 class="pb-3">Follow Us</h5>
                             <ul class="list-unstyled social-icon footer-icon">
                                 <li><a href="#"><span class='bx bxl-facebook'></span></a></li>
                                 <li><a href="#"><span class='bx bxl-instagram'></span></a></li>
@@ -49,7 +49,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-5 ps-md-5">
+                    <div class="col-md-12 col-xl-4 col-lg-12 col-12">
                         <div class="footer-list">
                           <h5 class="mt-3 pb-3">Connect Us</h5>
                             <ul class="list-unstyled footer-icon footer-icon-connect">
@@ -59,7 +59,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-12 col-xl-3 col-lg-12 col-12">
                         <div class="footer-list">
                             <h5 class="text-pin pb-3">Other Link</h5>
                             <ul class="list-unstyled footer-icon footer-icon-connect">
