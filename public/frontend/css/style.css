@@ -105,6 +105,8 @@ a {
     cursor: pointer;
 }
 
+
+
 .btn-primary:active:focus {
     box-shadow: none;
     outline: none;
@@ -1364,3 +1366,4 @@ blockquote p{
 .contact-details a{
     color: var(--primary);
 }
+

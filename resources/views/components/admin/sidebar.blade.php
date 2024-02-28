@@ -75,6 +75,24 @@ It is just to check the uri segment value so that we can activate the currenct s
         </ul>
       </li>
 
+      <!--Contact us -->
+      <li class="menu-item {{Request::segment(2)=='subscribe' ? 'menu-item active' : ''}}">
+        <a href="{{route('subscribe')}}" class="menu-link ">
+          <i class="menu-icon tf-icons bx bx-file"></i>
+          <div data-i18n="Layouts">Subscribed</div>
+        </a>
+      </li>
+
+      <!-- News Letter subscription -->
+
+       <!--Contact us -->
+       <li class="menu-item {{Request::segment(2)=='news' ? 'menu-item active' : ''}}">
+        <a href="{{route('news')}}" class="menu-link ">
+          <i class="menu-icon tf-icons bx bx-file"></i>
+          <div data-i18n="Layouts">News Letter</div>
+        </a>
+      </li>
+
       <!-- Metas -->
       {{-- <li class="menu-item {{Request::segment(2)== 'meta' ? 'menu-item active' : ''}}">
         <a href="{{route('meta.index')}}" class="menu-link ">

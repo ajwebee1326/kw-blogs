@@ -41,7 +41,7 @@ class WebSiteController extends Controller
 
     public function viewBlog(){
 
-        $blogs = Blog::paginate(1);
+        $blogs = Blog::paginate(6);
 
       return view('frontend.blog', compact('blogs')); 
     }
@@ -66,6 +66,10 @@ class WebSiteController extends Controller
     }
     public function viewContactUs(Request $request) {
 
+
+
+
+
         $request->validate([
             'name' => 'required',
             'email' => 'required|unique:contact_us,email',
@@ -75,8 +79,7 @@ class WebSiteController extends Controller
 
         $contact = new ContactUs();
 
-
-        $contact->name = $request['first-name'];
+        $contact->name = $request['name'];
         $contact->email = $request['email'];
         $contact->phone = $request['phone'];
         $contact->company_name = $request['company_name'];
@@ -84,8 +87,10 @@ class WebSiteController extends Controller
 
 
         if($contact->save()) {
-            $this->alert('success','Details sent successfully','success');
-            return redirect()->route('viewIndex');
+            //$this->alert('success','Details sent successfully','success');
+            // return redirect()->route('viewIndex');
+            return redirect()->route('viewIndex')->with('message', 'Thank you for submitting');
+
 
         }
         return redirect()->back();
