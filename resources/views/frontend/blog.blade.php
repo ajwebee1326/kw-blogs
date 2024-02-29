@@ -20,7 +20,7 @@
     <div class="container">
         <div class="blog-wrap grid-style">
             <div class="row">
-                @foreach ($blogs as $blog) 
+                @forelse ($blogs as $blog) 
                     <div class="col-md-12 col-lg-12 col-xl-4 col-12 mb-3">
                         <div class="blog-post-item">
                             <div class="blog-post-thumbnail">
@@ -48,7 +48,14 @@
                             </div>
                         </div>
                     </div>
-                @endforeach
+                    @empty
+                    @if(request()->has('search') && request()->get('search') != '')
+                        <h1 class="text-center text-warning">No blogs found with</h1>
+                        <h1 class="text-center text-warning">"{{ request()->get('search') }}"</h1>
+                    @else
+                        <h1 class="text-center text-warning">No blogs found</h1>
+                    @endif
+                @endforelse
                 {{ $blogs->links() }}
             </div>
         </div>
