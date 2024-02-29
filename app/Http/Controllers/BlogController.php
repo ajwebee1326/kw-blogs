@@ -108,8 +108,9 @@ class BlogController extends Controller
     public function edit(Blog $blog)
     {
         $categories = Category::all();
+        $tags = Tag::all();
 
-        return view('admin.blog.edit',['blogs' => $blog ,'categories' => $categories]);
+        return view('admin.blog.edit',['blogs' => $blog ,'categories' => $categories,'tags' => $tags]);
     }
 
     /**
@@ -139,13 +140,7 @@ class BlogController extends Controller
         $blog->description = $request->description;
         $blog->meta_title = $request->meta_title;
 
-        // if($request->has('tags')  && $request->tags){
-        //     $tags = implode(',',$request->tags);
-
-          
-
-        //     $blog->tags_id = $tags;
-        // }
+        
 
 
         $blog->meta_description = $request->meta_description;
@@ -154,12 +149,11 @@ class BlogController extends Controller
         
         $blog->banner = $request->banner;
         
-        if($blog->save()){
+        if($blog->save()){ 
 
-            if ($request->has('tags') && $request->tags) {
-                $tags = $request->tags;
-                $blog->tags()->sync($tags);
-            }
+            
+                $blog->tags()->sync($request->tags);
+            
 
 
             $this->alert('success','Blog Updated successfully','success');
