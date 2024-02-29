@@ -14,7 +14,7 @@
                                 Inbox peekaboo: Want Love letters. Want spam?"></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><span class="secondary-tooltip bx bxs-user-plus" alt="user" data-bs-toggle="tooltip" data-bs-placement="bottom" title="
+                            <a class="nav-link" href="#"><span class="secondary-tooltip bx bxs-user-plus user-icon" alt="user" data-bs-toggle="tooltip" data-bs-placement="bottom" title="
                                 Virtual high-five awaits! 🖐️"></span></a>
                         </li>
                 </ul>

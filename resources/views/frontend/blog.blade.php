@@ -21,7 +21,7 @@
         <div class="blog-wrap grid-style">
             <div class="row">
                 @foreach ($blogs as $blog) 
-                    <div class="col-md-12 col-lg-12 col-xl-4 col-12 mb-3">
+                    <div class="col-12 col-lg-6 col-xl-4 mb-3">
                         <div class="blog-post-item">
                             <div class="blog-post-thumbnail">
                                 <img src="{{$blog->thumbnail}}" alt="post-thumbnail">

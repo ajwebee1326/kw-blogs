@@ -109,7 +109,7 @@
     <div class="bg-light sec-space sec-space-m">
         <div class="container">
             <div class="row">
-                <div class="col-10 mx-auto">
+                <div class=" col-12 col-md-10 mx-auto">
                     <div class="join-us text-center">
                         <p class="mb-0 sub-text">Ready to join a buzzing community of like-minded pros where creativity thrives? Dive in with our newsletter for an exclusive pass!</p>
                         <button class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#subscribeModal">Subscribe</button>
