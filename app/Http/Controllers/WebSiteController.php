@@ -39,9 +39,19 @@ class WebSiteController extends Controller
       }
 
 
-    public function viewBlog(){
+    public function viewBlog(Request $request){
 
-        $blogs = Blog::paginate(6);
+        if($request->has('search')){
+            $blogs = Blog::where('title','like','%'.$request->search.'%')
+            ->orWhere('description','like','%'.$request->search.'%')
+            ->orWhereHas('tags',function($query) use($request){
+                $query->where('name','like','%'.$request->search.'%');
+            })
+            ->paginate(6);
+        }else{
+            $blogs = Blog::paginate(6);
+        }
+
 
       return view('frontend.blog', compact('blogs')); 
     }
@@ -65,10 +75,6 @@ class WebSiteController extends Controller
         return view('frontend.contact-us');
     }
     public function viewContactUs(Request $request) {
-
-
-
-
 
         $request->validate([
             'name' => 'required',

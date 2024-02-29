@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('contact_us', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
-            $table->unsignedBigInteger('phone'); 
-            $table->string('company_name');
-            $table->longText('message')->nullable();
+            $table->string('email');
+            $table->unsignedBigInteger('phone')->nullable(); 
+            $table->string('company_name')->nullable();
+            $table->longText('message');
             $table->timestamps();
         });
     }

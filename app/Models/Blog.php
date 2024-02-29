@@ -27,7 +27,7 @@ class Blog extends Model
 
     public function tags()
     {
-        return $this->belongsToMany(Tag::class, 'blog_tags');
+        return $this->belongsToMany(Tag::class, 'blog_tags', 'blog_id', 'tag_id');
     }
 
 }
