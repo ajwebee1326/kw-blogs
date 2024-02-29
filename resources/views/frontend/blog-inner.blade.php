@@ -48,7 +48,7 @@
 <section class="blog sec-space">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-12 col-md-12 col-xl-8 pe-md-4 pe-0">
+            <div class="col-12 col-lg-12 col-md-12 col-xl-8 pe-md-4">
                 <div class="blog-post-header">
                     <div class="blog-post-thumbnail">
                         <img src="{{$blog->banner}}">
