@@ -74,17 +74,23 @@ class WebSiteController extends Controller
     public function viewContactUsPage(){
         return view('frontend.contact-us');
     }
+
     public function viewContactUs(Request $request) {
+
 
         $request->validate([
             'name' => 'required',
-            'email' => 'required|unique:contact_us,email',
-            'phone' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required|digits_between:7,12|numeric',
+            'company_name' => 'required',
             'message' => 'required',
         ]);
 
+        
+
         $contact = new ContactUs();
 
+      
         $contact->name = $request['name'];
         $contact->email = $request['email'];
         $contact->phone = $request['phone'];
@@ -93,13 +99,11 @@ class WebSiteController extends Controller
 
 
         if($contact->save()) {
-            //$this->alert('success','Details sent successfully','success');
-            // return redirect()->route('viewIndex');
+           
             return redirect()->route('viewIndex')->with('message', 'Thank you for submitting');
-
-
         }
-        return redirect()->back();
+         return redirect()->back();
+       
         
     }
 }
