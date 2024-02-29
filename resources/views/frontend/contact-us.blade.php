@@ -15,13 +15,13 @@
 <section class="sec-space">
     <div class="container">
         <div class="row text-center">
-            <div class="col-md-4 mx-auto mb-5">
-                <h2>Contact Us</h2>
-                <p>We're here for anything you need. Just drop us quick message below. We'll get back in 24 hrs</p>
+            <div class=" col-12 col-xl-6 mx-auto mb-5">
+               
+                <h5>We're here for anything you need. Just drop us quick message below. We'll get back in 24 hrs</h5>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8 mx-auto">
+            <div class=" col-12 col-xl-8 mx-auto">
                  <div class="contact-us">
                         <div class="form-header">
                                 <img src="{{asset('frontend')}}/images/form-icon.png" alt="img-fluid form-icon">
@@ -70,7 +70,7 @@
                                     <div class="col-md-12 mb-4">
                                     <div class="form-group">
                                         <label for="" class="pb-2"><strong>Message</strong></label>
-                                        <textarea name="message" id="" cols="4" rows="3" class="form-control" placeholder="Enter Your Message Here"></textarea> 
+                                        <textarea name="message" id="" cols="4" rows="3" class="form-control" placeholder="Enter Your Message Here" required></textarea> 
                                     </div>
                                     @error('message')    
                                     <div class="text-danger mt-2">{{ $message }}</div>
@@ -92,9 +92,9 @@
 <section class="sec-space pt-0">
 <div class="container">
     <div class="row">
-        <div class="col-md-8 mx-auto">
-            <div class="row">
-                <div class="col-md-12 col-lg-12 col-xl-4 col-12 mb-4 mb-md-0">
+        <div class=" col-12 col-xl-8 mx-auto">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6 col-xl-4 mb-4 mb-xl-0">
                     <div class="contact-details text-center">
                         <div>
                             <span class="bx bx-envelope"></span>
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-12 col-xl-4 col-12 mb-4 mb-md-0">
+                <div class="col-12 col-md-6 col-xl-4 mb-4 mb-xl-0">
                     <div class="contact-details text-center">
                         <div>
                             <span class="bx bx-map"></span>
@@ -122,7 +122,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-lg-12 col-xl-4 col-12">
+                <div class="col-12 col-md-6 col-xl-4">
                 <div class="contact-details text-center">
                         <div>
                             <span class="bx bx-phone"></span>
