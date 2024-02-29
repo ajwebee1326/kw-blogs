@@ -17,7 +17,7 @@
         <div class="row text-center">
             <div class=" col-12 col-xl-6 mx-auto mb-5">
                
-                <h5>We're here for anything you need. Just drop us quick message below. We'll get back in 24 hrs</h5>
+                <h5 class="sub-heading mb-0">We're here for anything you need. Just drop us quick message below. We'll get back in 24 hrs</h5>
             </div>
         </div>
         <div class="row">
@@ -25,7 +25,7 @@
                  <div class="contact-us">
                         <div class="form-header">
                                 <img src="{{asset('frontend')}}/images/form-icon.png" alt="img-fluid form-icon">
-                                <h5 class="text-dark mb-2">Welcome  to Kaykewalk</h5>
+                                <h5 class="text-dark sub-heading mb-2">Welcome  to Kaykewalk</h5>
                         </div>
                     <form method="POST" action="{{route('viewContactUs')}}">
                             @csrf

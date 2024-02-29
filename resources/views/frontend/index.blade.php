@@ -22,7 +22,7 @@
                     </div>
                     <div class="banner-content text-center">
                         <p class="sub-text">Launching Soon...</p>
-                        <p class="sub-text">One place to make all yours tasks</p>
+                        <p class="sub-text">One place to make all your tasks</p>
                         <h1>A PIECE OF CAKE !</h1>
                     </div>
                 </div>
@@ -170,7 +170,7 @@
                                              <div class="col-md-12 mb-4">
                                                <div class="form-group">
                                                     <label for="" class="pb-2"><strong>Message</strong></label>
-                                                    <textarea name="message" id="" cols="4" rows="3" class="form-control" placeholder="Enter Your Message Here"></textarea> 
+                                                    <textarea name="message" id="" cols="4" rows="3" class="form-control" placeholder="Enter Your Message Here" required></textarea> 
                                                 </div>
                                             </div>
                                            
