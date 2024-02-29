@@ -22,7 +22,7 @@
                     </div>
                     <div class="banner-content text-center">
                         <p class="sub-text">Launching Soon...</p>
-                        <p class="sub-text">One place to make all yours tasks</p>
+                        <p class="sub-text">One place to make all your tasks</p>
                         <h1>A PIECE OF CAKE !</h1>
                     </div>
                 </div>

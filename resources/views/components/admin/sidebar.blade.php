@@ -20,7 +20,7 @@ It is just to check the uri segment value so that we can activate the currenct s
       <!-- Dashboard -->
       <li class="menu-item {{Request::segment(2)== 'dashboard' ? 'menu-item active' : ''}}">
         <a href="{{ route('dashboard')}}" class="menu-link">
-          <i class="menu-icon tf-icons bx bx-home-circle"></i>
+          <i class=' menu-icon bx bxs-dashboard'></i>
           <div data-i18n="Analytics">Dashboard</div>
         </a>
       </li>
@@ -38,7 +38,7 @@ It is just to check the uri segment value so that we can activate the currenct s
 
       <li class="menu-item {{Request::segment(2)=='category' ? 'menu-item active' : ''}}">
         <a href="{{route('category.index')}}" class="menu-link ">
-          <i class="menu-icon tf-icons bx bx-file"></i>
+          <i class=' menu-icon bx bx-category'></i>
           <div data-i18n="Layouts">Category</div>
         </a>
       </li>
@@ -47,7 +47,7 @@ It is just to check the uri segment value so that we can activate the currenct s
 
       <li class="menu-item {{Request::segment(2)=='tags' ? 'menu-item active' : ''}}">
         <a href="{{route('tags')}}" class="menu-link ">
-          <i class="menu-icon tf-icons bx bx-file"></i>
+          <i class=' menu-icon bx bx-tag-alt'></i>
           <div data-i18n="Layouts">Tags</div>
         </a>
       </li>
@@ -78,8 +78,8 @@ It is just to check the uri segment value so that we can activate the currenct s
       <!--Contact us -->
       <li class="menu-item {{Request::segment(2)=='subscribe' ? 'menu-item active' : ''}}">
         <a href="{{route('subscribe')}}" class="menu-link ">
-          <i class="menu-icon tf-icons bx bx-file"></i>
-          <div data-i18n="Layouts">Subscribed</div>
+           <i class=' menu-icon bx bx-book-content' ></i>
+          <div data-i18n="Layouts">Contact</div>
         </a>
       </li>
 
@@ -89,7 +89,7 @@ It is just to check the uri segment value so that we can activate the currenct s
        <li class="menu-item {{Request::segment(2)=='news' ? 'menu-item active' : ''}}">
         <a href="{{route('news')}}" class="menu-link ">
           <i class="menu-icon tf-icons bx bx-file"></i>
-          <div data-i18n="Layouts">News Letter</div>
+          <div data-i18n="Layouts">Subscribers</div>
         </a>
       </li>
 

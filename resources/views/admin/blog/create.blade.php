@@ -108,15 +108,6 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-12">
-                    <div class="mb-3">
-                      <label class="form-label" for="basic-icon-default-message">Description</label>
-                      <textarea id="editor" name="description" class="form-control" placeholder="Description"></textarea>
-                      @error('description')    
-                          <div class="text-danger mt-2">{{ $message }}</div>
-                      @enderror
-                    </div>
-                  </div>
                   <div class="col-md-6">
                     <div class="mb-3">
                       <label class="form-label" for="basic-icon-default-message">Short Description</label>
@@ -137,6 +128,16 @@
                       <input type="text" name="meta_description" class="form-control" placeholder="Meta Description">
                     </div>
                   </div>
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                      <label class="form-label" for="basic-icon-default-message">Description</label>
+                      <textarea id="editor" name="description" class="form-control" placeholder="Description"></textarea>
+                      @error('description')    
+                          <div class="text-danger mt-2">{{ $message }}</div>
+                      @enderror
+                    </div>
+                  </div>
+                
                 </div>
               
 
