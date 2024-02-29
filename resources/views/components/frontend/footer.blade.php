@@ -41,7 +41,7 @@
                 <div class="row">
                     <div class="col-md-12 col-xl-5 col-lg-12 col-12">
                         <div class="footer-list">
-                            <h5 class="pb-3">Follow Us</h5>
+                            <h5 class="mb-0 pb-3">Follow Us</h5>
                             <ul class="list-unstyled social-icon footer-icon">
                                 <li><a href="#"><span class='bx bxl-facebook'></span></a></li>
                                 <li><a href="#"><span class='bx bxl-instagram'></span></a></li>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="col-md-12 col-xl-4 col-lg-12 col-12">
                         <div class="footer-list">
-                          <h5 class="mt-3 pb-3">Connect Us</h5>
+                          <h5 class="mb-0 pb-3">Connect Us</h5>
                             <ul class="list-unstyled footer-icon footer-icon-connect">
                                 <li><a href="tel:+1(647)8748762"><span class='bx bx-phone'></span> +1 (647) 874 8762</a></li>
                                 <li><a href="mailto:hello@kaykewalk.com"><span class='bx bx-envelope'></span> hello@kaykewalk.com</a></li>
@@ -62,7 +62,7 @@
                     </div>
                     <div class="col-md-12 col-xl-3 col-lg-12 col-12">
                         <div class="footer-list">
-                            <h5 class="text-pin pb-3">Other Link</h5>
+                            <h5 class="mb-0 pb-3">Other Link</h5>
                             <ul class="list-unstyled footer-icon footer-icon-connect">
                                 <li><a href="{{route('viewBlog')}}"><span class='bx bx-chevrons-right'></span>Blog</a></li>
                                 <li><a href="{{route('viewContactUsPage')}}"><span class='bx bx-chevrons-right'></span>Contact Us</a></li>

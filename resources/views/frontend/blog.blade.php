@@ -30,7 +30,7 @@
                                     <div class="post-description">
                                         <div class="post-meta">
                                             <div class="post-date">
-                                                    <a href="{{ route('viewBlogInner', $blog->slug) }}">{{ \Carbon\Carbon::parse($blog->publish_date)->format('d M y') }}</a>                                                
+                                                    <a href="{{ route('viewBlogInner', $blog->slug) }}">{{ \Carbon\Carbon::parse($blog->publish_date)->format('M d, Y') }}</a>                                                
                                                             {{-- <a href="" class="post-comment">
                                                                 <span class="post-meta-number">0</span>
                                                                 <span class="post-meta-label">comment</span>

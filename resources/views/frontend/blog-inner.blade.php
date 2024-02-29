@@ -1,6 +1,5 @@
 @extends('frontend.layouts.app')
 
-
 @section('title', $blog->meta_title)
 
 @section('content')
@@ -33,7 +32,7 @@
                         </div>
                         <div class="blog-post-date">
                             <span class='bx bx-chevrons-right text-yellow'></span>
-                            <span class="meta-value">{{ \Carbon\Carbon::parse($blog->publish_date)->format('d M y') }}</span>
+                            <span class="meta-value">{{ \Carbon\Carbon::parse($blog->publish_date)->format('M d, Y') }}</span>
                         </div>
                         <div class="blog-post-comment">
                             <span class='bx bx-chevrons-right text-pink'></span>
@@ -48,7 +47,7 @@
 <section class="blog sec-space">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-lg-12 col-md-12 col-xl-8 pe-md-4 pe-0">
+            <div class="col-12 col-lg-12 col-md-12 col-xl-8 pe-md-4">
                 <div class="blog-post-header">
                     <div class="blog-post-thumbnail">
                         <img src="{{$blog->banner}}">
@@ -59,7 +58,7 @@
                 </div>
                 <div class="blog-post-footer">
                     <div class="row align-items-center">
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-12 mb-3">
                             <div class="blog-post-tag">
                                 @foreach ($blog->tags as $tag)
                                 <a href="#">
@@ -69,7 +68,7 @@
                                 @endforeach
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 col-12">
                             <div class="blog-post-share">
                                 <div class="post-share">
                                     <div class="post-share-heading">Share this post</div>
@@ -126,7 +125,7 @@
                                                 <div class="post-meta">
                                                     <div class="post-date">
                                                         <span>
-                                                           {{ \Carbon\Carbon::parse($blog->publish_date)->format('d,M Y') }}
+                                                           {{ \Carbon\Carbon::parse($blog->publish_date)->format('M d, Y') }}
                                                         </span>
                                                     </div>
                                                 </div>
@@ -177,7 +176,7 @@
                                             <div class="recent-post-category">
                                                 <a href="{{ route('viewBlogInner', ['id' => $recentBlog->id]) }}">{{$recentBlog->category->name}}</a>
                                             </div>
-                                            <div class="recent-post-date">{{ \Carbon\Carbon::parse($blog->publish_date)->format('d M y') }}</div>
+                                            <div class="recent-post-date">{{ \Carbon\Carbon::parse($blog->publish_date)->format('M d, Y') }}</div>
                                         </div>
                                         <div class="recent-post-title">
                                         <h6><a class="text-white" href="{{ route('viewBlogInner',$blog->slug) }}">{{$recentBlog->title}}</a></h6>
@@ -212,25 +211,6 @@
                                 @foreach ($tags as $tag)
                                 <div class="multi-tag">
                                     <a href="" class="tag-link">{{$tag->name}}</a>
-
-                                    {{-- {{ $tag->name }}@if(!$loop->last), @endif --}}
-                                    {{-- <a href="" class="tag-link">Business</a>
-                                    <a href="" class="tag-link">Career</a>
-                                    <a href="" class="tag-link">Career</a>
-                                    <a href="" class="tag-link">Career</a>
-                                    <a href="" class="tag-link">Marketing</a>
-                                    <a href="" class="tag-link">Activity</a>
-                                    <a href="" class="tag-link">Business</a>
-                                    <a href="" class="tag-link">Career</a>
-                                    <a href="" class="tag-link">Career</a>
-                                    <a href="" class="tag-link">Career</a>
-                                    <a href="" class="tag-link">Marketing</a>
-                                    <a href="" class="tag-link">Activity</a>
-                                    <a href="" class="tag-link">Business</a>
-                                    <a href="" class="tag-link">Career</a>
-                                    <a href="" class="tag-link">Career</a>
-                                    <a href="" class="tag-link">Career</a>
-                                    <a href="" class="tag-link">Marketing</a> --}}
                                 </div>
                                 @endforeach
                             </div>
