@@ -6,6 +6,7 @@ use App\Models\Meta;
 use App\Models\Blog;
 use App\Models\ContactUs;
 use App\Models\Category;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -40,7 +41,7 @@ class WebSiteController extends Controller
 
     public function viewBlog(){
 
-        $blogs = Blog::paginate(1);
+        $blogs = Blog::paginate(6);
 
       return view('frontend.blog', compact('blogs')); 
     }
@@ -50,18 +51,24 @@ class WebSiteController extends Controller
         $categoryies = Category::all();
         $recentBlog = Blog::latest()->first();
         $blog = Blog::where('slug',$slug)->first();
+
+        $tags = Tag::all();
         
         $related_blogs = Blog::where('category_id',$blog->category_id)
         ->where('id','!=',$blog->id)
         ->limit(2)->get();
 
-        return view('frontend.blog-inner',compact('blog','categoryies','recentBlog','related_blogs'));
+        return view('frontend.blog-inner',compact('blog','categoryies','recentBlog','related_blogs','tags'));
     }
 
     public function viewContactUsPage(){
         return view('frontend.contact-us');
     }
     public function viewContactUs(Request $request) {
+
+
+
+
 
         $request->validate([
             'name' => 'required',
@@ -72,8 +79,7 @@ class WebSiteController extends Controller
 
         $contact = new ContactUs();
 
-
-        $contact->name = $request['first-name'];
+        $contact->name = $request['name'];
         $contact->email = $request['email'];
         $contact->phone = $request['phone'];
         $contact->company_name = $request['company_name'];
@@ -81,8 +87,10 @@ class WebSiteController extends Controller
 
 
         if($contact->save()) {
-            $this->alert('success','Details sent successfully','success');
-            return redirect()->route('viewIndex');
+            //$this->alert('success','Details sent successfully','success');
+            // return redirect()->route('viewIndex');
+            return redirect()->route('viewIndex')->with('message', 'Thank you for submitting');
+
 
         }
         return redirect()->back();

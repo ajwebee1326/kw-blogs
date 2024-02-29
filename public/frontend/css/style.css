@@ -105,6 +105,8 @@ a {
     cursor: pointer;
 }
 
+
+
 .btn-primary:active:focus {
     box-shadow: none;
     outline: none;
@@ -549,12 +551,29 @@ section{
 .top-header .navbar .navbar-brand img{
     width: 130px
 }
+
+
+.post-share .post-share-media:hover .share-list{
+    transform: translate(-89%,-12%);
+}
+
+.post-share .share-list:before{
+    right: 0;
+}
+
+.blog .blog-post-share {
+    text-align: right;
+}
+
  /*--- Footer ---*/
 .footer-list h5{
     margin-top: 20px;
 }
 .news-letter input{
-    width: 400px;
+    width: 100%;
+}
+.space{
+    width: 100%;
 }
 }
 @media(max-width:767px) {
@@ -684,8 +703,8 @@ section{
     }
 
     h1 {
-        font-size: 38px;
-        line-height: 48px;
+        font-size: 34px;
+        line-height: 44px;
     }
 /*--- Footer ---*/
 .footer-list h5{
@@ -870,6 +889,10 @@ section{
     text-decoration: none;
 }
 
+.blog-post-category a:hover {
+    background-color: #422B9F;
+}
+
 .blog-post-meta {
     font-size: 14px;
     line-height: 24px;
@@ -902,6 +925,9 @@ section{
     display: inline-block;
     vertical-align: middle;
     color: var(--grey);
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 5px 12px;
     font-weight: 500;
 }
 
@@ -911,6 +937,13 @@ section{
     margin: 0 10px 0 0;
     text-decoration: none;
 }
+
+
+.blog .blog-post-footer .blog-post-tag a:hover{
+    color: var(--primary);
+}
+
+
 
 .blog .blog-post-share {
     text-align: right;
@@ -965,8 +998,7 @@ section{
     border-radius: 5px;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
     filter: drop-shadow(0 2px 20px rgba(0, 0, 0, 0.06));
-    z-index: 999;
-    visibility: hidden;
+    z-index: 9999;
     opacity: 0;
     user-select: none;
 }
@@ -1281,7 +1313,7 @@ blockquote p{
 }
 
 .multi-tag .tag-link:hover {
-    color: var(--grey);
+    color: var(--primary);
 }
 /*--- Recent Post ---*/
 .recent-post-item{
@@ -1311,7 +1343,7 @@ blockquote p{
 .recent-post-meta .recent-post-date{
     font-size: 13px;
     cursor: pointer;
-    color: var(--primary);
+    color:#9B9EA4;
 }
 .recent-post-date:hover{
     color: var(--secondary);
@@ -1364,3 +1396,4 @@ blockquote p{
 .contact-details a{
     color: var(--primary);
 }
+

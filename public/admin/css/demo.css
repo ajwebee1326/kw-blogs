@@ -153,17 +153,17 @@ div .btn-primary:hover{
  div .bg-footer-theme .footer-link:hover{
   color: var(--bg-pink);
  }
- div .pagination li.page-item span{
-  display: inline-block;
-  border-radius: 50%;
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--bg-secondary);
-  color: var(--secondary);
-}
-div .pagination li.page-item.active span{
-  display: inline-block;
-  border-radius: 50%;
-  background-color: var(--bg-pink);
-  border: 1px solid var(--bg-pink);
-  color: var(--secondary);
-}
+
+
+ /* table style */
+ 
+ .table thead{
+
+  background-color: #bf9bec;
+  
+ }
+
+ .table thead th {
+
+  color: #fff !important;
+ }

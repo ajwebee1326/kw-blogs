@@ -1,5 +1,5 @@
 @extends('frontend.layouts.app')
-
+@section('title', 'Blogs')
 
 @section('content')
 
@@ -21,7 +21,7 @@
         <div class="blog-wrap grid-style">
             <div class="row">
                 @foreach ($blogs as $blog) 
-                    <div class="col-md-4">
+                    <div class="col-md-12 col-lg-12 col-xl-4 col-12 mb-3">
                         <div class="blog-post-item">
                             <div class="blog-post-thumbnail">
                                 <img src="{{$blog->thumbnail}}" alt="post-thumbnail">
@@ -30,7 +30,7 @@
                                     <div class="post-description">
                                         <div class="post-meta">
                                             <div class="post-date">
-                                                    <a href="{{ route('viewBlogInner', $blog->slug) }}">{{ \Carbon\Carbon::parse($blog->publish_date)->format('d M y') }}</a>                                                
+                                                    <a href="{{ route('viewBlogInner', $blog->slug) }}">{{ \Carbon\Carbon::parse($blog->publish_date)->format('M d, Y') }}</a>                                                
                                                             {{-- <a href="" class="post-comment">
                                                                 <span class="post-meta-number">0</span>
                                                                 <span class="post-meta-label">comment</span>

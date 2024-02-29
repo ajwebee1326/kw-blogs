@@ -44,7 +44,6 @@ class TagsController extends Controller
             'tag_name' => 'required'
         ]);
 
-
         $tags = new Tag();
         $tags->name = $request->tag_name; 
         
