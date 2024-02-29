@@ -38,11 +38,16 @@ class TagsController extends Controller
      */
     public function store(Request $request)
     {
+        $rules = [
+            'tag_name' => 'required|unique:tags,name'
+        ];
 
-        $request -> validate([
+        $customMessages = [
+            'tag_name.required' => 'Tag Name is required',
+            'tag_name.unique' => 'Tag Name is already exists'
+        ];
 
-            'tag_name' => 'required'
-        ]);
+        $this->validate($request, $rules, $customMessages);
 
         $tags = new Tag();
         $tags->name = $request->tag_name; 

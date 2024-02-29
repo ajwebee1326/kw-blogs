@@ -33,7 +33,7 @@
                                 <div class="col-md-6 mb-4">
                                     <div class="form-group">
                                         <label for="" class="pb-2"><strong>Full Name</strong></label>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Full Name" required>
+                                        <input type="text" class="form-control" id="name" value="{{ old('name') }}" name="name" placeholder="Enter Your Full Name" required>
                                     </div>
                                     @error('name')    
                                     <div class="text-danger mt-2">{{ $message }}</div>
@@ -43,7 +43,7 @@
                                 <div class="col-md-6 mb-4">
                                     <div class="form-group">
                                         <label for="" class="pb-2"><strong>Email</strong></label>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Work Email" required>
+                                        <input type="email" class="form-control" id="email" value="{{ old('email') }}" name="email" placeholder="Work Email" required>
                                         
                                     </div>
                                     @error('email')    
@@ -53,14 +53,14 @@
                                 <div class="col-md-6 mb-4">
                                     <div class="form-group">
                                         <label class="pb-2"><strong>Company Name</strong></label>
-                                        <input type="text" class="form-control" id="company_name" name="company_name" placeholder="Enter Your Company Name" required>
+                                        <input type="text" class="form-control" id="company_name" name="company_name" value="{{ old('company_name') }}" placeholder="Enter Your Company Name" required>
                                     </div>
                                     
                                 </div>
                                 <div class="col-md-6 mb-4">
                                     <div class="form-group">
                                         <label for="" class="pb-2"><strong>Phone No</strong></label>
-                                        <input type="number" class="form-control" id="phone"  name="phone" placeholder="Enter Your Number" required>
+                                        <input type="number" class="form-control" id="phone" value="{{ old('phone') }}"  name="phone" placeholder="Enter Your Number" required>
                                         
                                     </div>
                                     @error('phone')    
@@ -72,6 +72,9 @@
                                         <label for="" class="pb-2"><strong>Message</strong></label>
                                         <textarea name="message" id="" cols="4" rows="3" class="form-control" placeholder="Enter Your Message Here" required></textarea> 
                                     </div>
+                                    @error('message')    
+                                    <div class="text-danger mt-2">{{ $message }}</div>
+                                    @enderror
                                 </div>
                                 
                                 

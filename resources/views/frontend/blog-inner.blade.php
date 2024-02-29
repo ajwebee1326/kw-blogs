@@ -151,9 +151,9 @@
                                     <span>Search</span>
 
                                 </div>
-                                <form action="" class="search-form">
+                                <form action="{{ route('viewBlog') }}" class="search-form">
                                     <label for="">
-                                        <input type="search" class="search-field" placeholder="Search…" value="">
+                                        <input type="search" name="search" class="search-field" placeholder="Search…" value="">
                                     </label>
                                     <button type="submit" class="search-submit">
                                         <span class="search-btn-icon bx bx-search"></span>
@@ -210,7 +210,7 @@
 
                                 @foreach ($tags as $tag)
                                 <div class="multi-tag">
-                                    <a href="" class="tag-link">{{$tag->name}}</a>
+                                    <a href="{{ route('viewBlog') }}?search={{$tag->name}}" class="tag-link">{{$tag->name}}</a>
                                 </div>
                                 @endforeach
                             </div>
