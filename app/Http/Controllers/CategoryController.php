@@ -40,10 +40,11 @@ class CategoryController extends Controller
 
         $request -> validate([
 
-            'category_name' => 'required'
+            'category_name' => 'required|unique:categories,name'
         ]);
         
         $category = new Category();
+
         $category->name = $request->category_name;
 
         if($category->save()){
