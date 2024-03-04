@@ -213,9 +213,12 @@
   
       // Call the showModal function if needed
       // For example, if there are validation errors, call showModal
-      @if ($errors->any())
-        showModal();
-      @endif
+
+      
+            @if ($errors->any())
+                showModal();
+            @endif
+       
   
       // You can also call hideModal when you need to hide the modal
     });

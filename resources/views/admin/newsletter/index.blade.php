@@ -20,6 +20,7 @@
                     <tr>
                         
                         <th>Email</th>
+                        <th>Action</th>
                        
                         
                     </tr>
@@ -30,6 +31,13 @@
                         
                         <td>{{$newsletter->email}}</td>
                         
+                            <td>
+                                <form action="{{ route('news.destroy' , $newsletter->id) }}" method="POST" class="d-inline">
+                                     @csrf
+                                     @method('DELETE')
+                                     <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                 </form>
+                             </td>
                        
                     </tr>
                      @endforeach

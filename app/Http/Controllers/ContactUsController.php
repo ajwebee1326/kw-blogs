@@ -78,9 +78,17 @@ class ContactUsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(ContactUs $contactus)
     {
-        //
+        if($contactus->delete()) {
+
+            $this->alert('success', 'Contact Removed Successfully','success');
+            return redirect()->route('subscribe');
+        }
+
+        $this->alert('error', 'Something went wrong','danger');
+        return redirect()->back();
+        
     }
 
 }

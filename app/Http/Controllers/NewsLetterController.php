@@ -39,7 +39,9 @@ class NewsLetterController extends Controller
     public function store(Request $request)
     {
         
+
         $newsletters = new NewsLetter();
+
         $newsletters->email = $request->newsletter_email;
 
         if($newsletters->save()){
@@ -92,8 +94,16 @@ class NewsLetterController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(NewsLetter $newsletter)
     {
-        //
+
+        if($newsletter->delete()) {
+        
+            $this->alert('success', 'Email disabled successfully', 'success');
+            return redirect()->route('news');
+        }
+
+        $this->alert('error', 'Something went wrong','danger');
+        return redirect()->back();
     }
 }

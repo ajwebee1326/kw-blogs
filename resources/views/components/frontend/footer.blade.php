@@ -31,7 +31,7 @@
                             @csrf
                             <div class="col-12 col-xl-7 mb-3 mb-xl-0">
                                 <input type="email" class="form-control " id="" name="newsletter_email" placeholder="Enter Your Email Address" required>
-                                </div>
+                            </div>
                             <div class="col-12 col-xl-5 mb-3 mb-xl-0">
                                 <button type="submit" class="btn btn-primary btn-subscribe">Submit</button>
                             </div>
