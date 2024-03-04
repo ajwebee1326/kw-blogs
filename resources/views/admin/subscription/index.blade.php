@@ -22,6 +22,7 @@
                         <th>Email</th>
                         <th>Phone</th>
                         <th>Message</th>
+                        <th>Action</th>
                         
                     </tr>
                 </thead>
@@ -32,6 +33,13 @@
                         <td>{{$subscription->email}}</td>
                         <td>{{$subscription->phone}}</td>
                         <td>{{$subscription->message}}</td>
+                        <td>
+                           <form action="{{ route('contact.destroy' , $subscription->id) }}" method="POST" class="d-inline">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                            </form>
+                        </td>
                        
                     </tr>
                      @endforeach
