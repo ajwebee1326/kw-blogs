@@ -167,3 +167,27 @@ div .btn-primary:hover{
 
   color: #fff !important;
  }
+ .dataTables_filter{
+  margin-bottom: 15px;
+ }
+/*--- Search Field ---*/
+.select2-search__field{
+  padding-left: 13px !important;
+}
+ div .form-control{
+  color: var(--primary);
+}
+label{
+  color: var(--primary) !important; 
+}
+.card{
+  padding-bottom: 15px;
+}
+.bg-success.toast, .bg-success.bs-toast {
+  color: #fff;
+  box-shadow: 0 0.25rem 1rem  var(--bg-pink);
+  background-color: var(--bg-pink) !important;
+}
+.bg-success.toast .toast-header .btn-close, .bg-success.bs-toast .toast-header .btn-close{
+  background-color: var(--bg-pink) !important;
+}

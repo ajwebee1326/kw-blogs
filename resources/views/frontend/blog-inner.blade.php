@@ -31,12 +31,8 @@
                             <span class="meta-value">Webeesocial</span>
                         </div>
                         <div class="blog-post-date">
-                            <span class='bx bx-chevrons-right text-yellow'></span>
+                            <span class='bx bx-calendar text-yellow me-1'></span>
                             <span class="meta-value">{{ \Carbon\Carbon::parse($blog->publish_date)->format('M d, Y') }}</span>
-                        </div>
-                        <div class="blog-post-comment">
-                            <span class='bx bx-chevrons-right text-pink'></span>
-                            <span class="meta-value">0 Comments</span>
                         </div>
                     </div>
             </div>
@@ -44,7 +40,7 @@
     </div>
 
 </section>
-<section class="blog sec-space">
+<section class="blog sec-space sec-space-m">
     <div class="container">
         <div class="row">
             <div class="col-12 col-xl-8 pe-md-4">
@@ -62,7 +58,7 @@
                             <div class="blog-post-tag">
                                 @foreach ($blog->tags as $tag)
                                 <a href="#">
-                                    <span class="tag-shape">#</span>
+                                    <span class="tag-shape"><i class='bx bx-purchase-tag' ></i></span>
                                     <span class="tag-name">{{$tag->name}}</span>
                                 </a>
                                 @endforeach

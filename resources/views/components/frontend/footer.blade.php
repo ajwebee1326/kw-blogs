@@ -42,7 +42,7 @@
                     <div class=" col-12 col-lg-4 col-xl-5 mb-4 mb-xl-0">
                         <div class="footer-list">
                             <h5 class="mb-3">Follow Us</h5>
-                            <ul class="list-unstyled social-icon footer-icon">
+                            <ul class="list-unstyled social-icon footer-icon mb-0">
                                 <li><a href="#"><span class='bx bxl-facebook'></span></a></li>
                                 <li><a href="#"><span class='bx bxl-instagram'></span></a></li>
                                 <li><a href="#"><span class='bx bxl-twitter'></span></a></li>
