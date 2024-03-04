@@ -53,7 +53,10 @@ Route::group(['middleware' => 'auth','prefix'=>'/admin'], function () {
     Route::get('/subscribe', [ContactUsController::class, 'index'])->name('subscribe');
     Route::delete('/subscribe/{contactus}', [ContactUsController::class, 'destroy'])->name('contact.destroy');
 
+
     
+    Route::get('/news-letter', [NewsLetterController::class, 'index'])->name('news');
+    Route::delete('/news-letter/{newsletter}', [NewsLetterController::class,'destroy'])->name('news.destroy');
 
 
     /*-------------------------------
@@ -92,8 +95,7 @@ Route::group(['middleware' => 'auth','prefix'=>'/admin'], function () {
 
 
 
-Route::get('/news-letter', [NewsLetterController::class, 'index'])->name('news');
 Route::post('/news-letter/store', [NewsLetterController::class, 'store'])->name('news.store');
-Route::delete('/news-letter/{newsletter}', [NewsLetterController::class,'destroy'])->name('news.destroy');
+
 
 
