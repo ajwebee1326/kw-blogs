@@ -12,7 +12,7 @@
                     <div class="space mt-4">
 
                         <p class="mb-4 mb-xl-0 mt-3">Introducing Kaykewalk: Your ultimate project management buddy, making
-                            work as refreshing as a sip of 7UP! Say goodbye to chaos and hello to smooth sailing
+                            work as refreshing as a sip of lemonade! Say goodbye to chaos and hello to smooth sailing
                             with our super-cool tool. From managing tasks to collaborating with clients, Kaykewalk
                             turns every project into a piece of cake.</p>
                     </div>
