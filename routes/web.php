@@ -98,4 +98,3 @@ Route::group(['middleware' => 'auth','prefix'=>'/admin'], function () {
 Route::post('/news-letter/store', [NewsLetterController::class, 'store'])->name('news.store');
 
 
-
