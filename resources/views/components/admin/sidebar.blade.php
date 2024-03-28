@@ -89,7 +89,7 @@ It is just to check the uri segment value so that we can activate the currenct s
        <li class="menu-item {{Request::segment(2)=='news-letter' ? 'menu-item active' : ''}}">
         <a href="{{route('news')}}" class="menu-link ">
           <i class="menu-icon tf-icons bx bx-file"></i>
-          <div data-i18n="Layouts">Subscribers</div>
+          <div data-i18n="Layouts">NewsLetter</div>
         </a>
       </li>
 
