@@ -19,7 +19,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('frontend') }}/images/fav.jpg" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('frontend') }}/images/favicon.jpeg" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -97,7 +97,7 @@
                       name="password"
                       placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                       aria-describedby="password"
-                      value="12345"
+                      value=""
                     />
                     @error('password')    
                       <span class="text-danger">{{ $message }}</span>
