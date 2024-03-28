@@ -932,7 +932,6 @@ label strong {
 	margin: 0 0 15px;
 }
 
-.post-info .post-date {}
 
 .post-info .post-title {
 	font-size: 24px;
@@ -1186,6 +1185,15 @@ blockquote p {
 }
 
 /*---- Contact Us ---*/
+
+.contact-banner{
+	background: url(../images/contact-us-banner.jpg) no-repeat center / cover;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .contact-us {
 	border: 1px solid #000;
 	padding: 30px;
