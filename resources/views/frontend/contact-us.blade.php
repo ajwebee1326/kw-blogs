@@ -1,7 +1,7 @@
 @extends('frontend.layouts.app')
 @section('title', 'Contact Us')
 @section('content')
-<section class="blog-banner">
+<section class="contact-banner">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -79,7 +79,7 @@
                                 
                                 
                                 <div class="col-md-6 mx-auto text-center">
-                                    <Button type="submit" class="btn btn-primary btn-subscribe" >Subscribe</Button>
+                                    <Button type="submit" class="btn btn-primary btn-subscribe" >Contact Us</Button>
                                 </div>
                             </div>
                     </form>
