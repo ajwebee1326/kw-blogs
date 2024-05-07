@@ -74,7 +74,7 @@
                                             <a href="https://twitter.com/?lang=en">
                                                 <span class='bx bxl-twitter'></span>
                                             </a>
-                                            <a href="https://www.facebook.com/reel/1411633062763319">
+                                            <a href="https://www.facebook.com/sharer.php?u={{url()->current()}}">
                                                 <span class='bx bxl-facebook'></span>
                                             </a>
                                             <a href="https://www.instagram.com/">
