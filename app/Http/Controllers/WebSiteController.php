@@ -41,11 +41,22 @@ class WebSiteController extends Controller
 
     public function viewBlog(Request $request){
 
-        if($request->has('search')){
-            $blogs = Blog::where('title','like','%'.$request->search.'%')
-            ->orWhere('description','like','%'.$request->search.'%')
-            ->orWhereHas('tags',function($query) use($request){
-                $query->where('name','like','%'.$request->search.'%');
+        // if($request->has('search')){
+        //     $blogs = Blog::where('title','like','%'.$request->search.'%')
+        //     ->orWhere('description','like','%'.$request->search.'%')
+        //     ->orWhereHas('tags',function($query) use($request){
+        //         $query->where('name','like','%'.$request->search.'%');
+        //     })
+        //     ->paginate(6);
+
+        if ($request->has('search')) {
+           $blogs = Blog::where('title', 'like', '%' . $request->search . '%')
+            ->orWhere('description', 'like', '%' . $request->search . '%')
+            ->orWhereHas('tags', function($query) use($request) {
+                $query->where('name', 'like', '%' . $request->search . '%');
+            })
+            ->orWhereHas('category', function($query) use($request) {
+                $query->where('name', 'like', '%' . $request->search . '%');
             })
             ->paginate(6);
         }else{
@@ -60,6 +71,8 @@ class WebSiteController extends Controller
        
         $categoryies = Category::all();
         $recentBlog = Blog::latest()->first();
+
+       
         $blog = Blog::where('slug',$slug)->first();
 
         $tags = Tag::all();
@@ -67,6 +80,8 @@ class WebSiteController extends Controller
         $related_blogs = Blog::where('category_id',$blog->category_id)
         ->where('id','!=',$blog->id)
         ->limit(2)->get();
+
+
 
         return view('frontend.blog-inner',compact('blog','categoryies','recentBlog','related_blogs','tags'));
     }

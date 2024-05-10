@@ -80,7 +80,7 @@
                     name="email"
                     placeholder="Enter your email or username"
                     autofocus
-                    value="admin@gmail.com"
+                    value="kw_blog@kaykewalk.com"
                   />
                   @error('email')    
                     <span class="text-danger">{{ $message }}</span>
@@ -97,7 +97,7 @@
                       name="password"
                       placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                       aria-describedby="password"
-                      value=""
+                      value="Kw@blogs11"
                     />
                     @error('password')    
                       <span class="text-danger">{{ $message }}</span>
