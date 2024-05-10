@@ -48,7 +48,8 @@ return [
     'folder_categories'        => [
         'file'  => [
             'folder_name'  => 'files',
-            'startup_view' => 'list',
+            // 'startup_view' => 'list',
+            'startup_view' => '',
             'max_size'     => 50000, // size in KB
             'thumb' => true,
             'thumb_width' => 80,

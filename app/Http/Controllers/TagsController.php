@@ -53,7 +53,7 @@ class TagsController extends Controller
         $tags->name = $request->tag_name; 
         
         if($tags->save()){
-            $this->alert('success','Tag Saved successfully','success');
+            $this->alert('Success','Tag Saved successfully','success');
             return redirect()->route('tags');
         }
 
@@ -97,7 +97,7 @@ class TagsController extends Controller
         $tags->name = $request->tag_name; 
 
         if($tags->save()){
-            $this->alert('success', 'Tags Updated Successfully', 'success');
+            $this->alert('Success', 'Tags Updated Successfully', 'success');
             return redirect()->route('tags');
         }
         $this->alert('error', 'Something Went Wrong', 'error');
@@ -113,7 +113,7 @@ class TagsController extends Controller
     public function destroy(Tag $tags)
     {
         if($tags->delete()){
-            $this->alert('success','Tags Removed successfully','success');
+            $this->alert('Success','Tags Removed successfully','success');
             return redirect()->route('tags');
 
         }

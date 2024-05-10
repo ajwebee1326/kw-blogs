@@ -41,7 +41,7 @@
 
 /* Navbar page z-index issue solution */
 .content-wrapper .navbar {
-  z-index: auto;
+  z-index: 999999;
 }
 
 /*
@@ -183,11 +183,15 @@ label{
 .card{
   padding-bottom: 15px;
 }
-.bg-success.toast, .bg-success.bs-toast {
+/* .bg-success.toast, .bg-success.bs-toast {
   color: #fff;
   box-shadow: 0 0.25rem 1rem  var(--bg-pink);
   background-color: var(--bg-pink) !important;
-}
-.bg-success.toast .toast-header .btn-close, .bg-success.bs-toast .toast-header .btn-close{
+} */
+/* .bg-success.toast .toast-header .btn-close, .bg-success.bs-toast .toast-header .btn-close{
   background-color: var(--bg-pink) !important;
+} */
+
+.contact-message{
+  white-space: normal;
 }

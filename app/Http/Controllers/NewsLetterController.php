@@ -99,7 +99,7 @@ class NewsLetterController extends Controller
 
         if($newsletter->delete()) {
         
-            $this->alert('success', 'Email disabled successfully', 'success');
+            $this->alert('Success', 'Email disabled successfully', 'success');
             return redirect()->route('news');
         }
 

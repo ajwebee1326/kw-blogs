@@ -18,26 +18,21 @@
             <table class="table" id="datatable-newsletter">
                 <thead>
                     <tr>
-                        
                         <th>Email</th>
                         <th>Action</th>
-                       
-                        
                     </tr>
                 </thead>
                 <tbody class="table-border-bottom-0">
                     @foreach($newsletters as $newsletter)
                     <tr>
-                        
                         <td>{{$newsletter->email}}</td>
-                        
                             <td>
-                                <form action="{{ route('news.destroy' , $newsletter->id) }}" method="POST" class="d-inline">
+                                <form action="{{ route('news.destroy' , $newsletter->id) }}" method="POST" class="d-inline" id="deleteForm{{$newsletter->id}}">
                                      @csrf
                                      @method('DELETE')
-                                     <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                                 </form>
-                             </td>
+                                     <button type="button" onclick="confirmDelete({{ $newsletter->id }})" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                            </td>
                        
                     </tr>
                      @endforeach
@@ -55,5 +50,11 @@
         $(document).ready( function () {
             $('#datatable-newsletter').DataTable();
         } );
+
+        function confirmDelete(newsletterId) {
+                    if (confirm('Are you sure you want to delete this newsletter?')) {
+                        document.getElementById('deleteForm'+newsletterId).submit();
+                    }
+                }
     </script>
 @endsection

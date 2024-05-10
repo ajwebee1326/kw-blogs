@@ -42,8 +42,6 @@ class BlogController extends Controller
     public function store(Request $request)
     {
        
-
-       
         $request->validate([
             'blog_title' => 'required',
             'description' => 'required',
@@ -69,6 +67,7 @@ class BlogController extends Controller
         $blogs->meta_description = $request->meta_description;
         $blogs->thumbnail = $request->thumbnail;
         $blogs->banner = $request->banner;
+        $blogs->banner_thumb_alt = $request->alt;
         $blogs->type = 1;
 
        
@@ -81,7 +80,7 @@ class BlogController extends Controller
             }
 
 
-            $this->alert('success','Blog Added successfully','success');
+            $this->alert('Success','Blog Added successfully','success');
             return redirect()->route('blog.index');
         }
         $this->alert('error','Something went wrong','error');
@@ -156,7 +155,7 @@ class BlogController extends Controller
             
 
 
-            $this->alert('success','Blog Updated successfully','success');
+            $this->alert('Success','Blog Updated successfully','success');
             return redirect()->route('blog.index');
         }
         $this->alert('error','Something went wrong','danger');
@@ -173,7 +172,7 @@ class BlogController extends Controller
     public function destroy(Blog $blog)
     {
         if($blog->delete()){
-            $this->alert('success','Blog Deleted successfully','success');
+            $this->alert('Success','Blog Deleted successfully','success');
             return redirect()->route('blog.index');
 
         }else{

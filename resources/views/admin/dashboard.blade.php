@@ -3,21 +3,21 @@
 @section('content')
 <div class="row">
    <div class="col-md-6">
-      <div class="card p-3 text-end">
-         <figure class="mb-0">
+      {{-- <div class="card p-3 text-end"> --}}
+         {{-- <figure class="mb-0">
            <blockquote class="blockquote ">
              <p class="quote_content"></p>
            </blockquote>
            <figcaption class="blockquote-footer mb-0 text-muted quote_author">
            </figcaption>
-         </figure>
-         <div class="demo-inline-spacing quote_tags"></div>
-         <div class="text-center mt-2 quote_spinner">
+         </figure> --}}
+         {{-- <div class="demo-inline-spacing quote_tags"></div> --}}
+         {{-- <div class="text-center mt-2 quote_spinner">
             <div class="spinner-border spinner-border-lg text-primary " role="status">
                <span class="visually-hidden">Loading...</span>
              </div>
-         </div>
-       </div>
+         </div> --}}
+       {{-- </div> --}}
     </div>
    </div>
 @endsection

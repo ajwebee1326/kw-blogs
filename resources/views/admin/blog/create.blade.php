@@ -108,6 +108,15 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="col-md-3">
+                    <div class="mb-3">
+                      <label class="form-label" for="basic-icon-default-message">Image Alt tag</label>
+                      <input type="text" name="alt" class="form-control" placeholder="Image Alt">
+                    </div>
+                  </div>
+
+
                   <div class="col-md-6">
                     <div class="mb-3">
                       <label class="form-label" for="basic-icon-default-message">Short Description</label>

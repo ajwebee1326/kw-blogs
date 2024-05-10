@@ -2,6 +2,8 @@
 
 @section('title', $blog->meta_title)
 
+@section('meta_description', $blog->meta_description)
+
 @section('content')
 
  <!--- Left Side --->
@@ -11,7 +13,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="blog-post-banner">
-                    <img src="{{$blog->banner}}">
+                    <img src="{{$blog->banner}}" alt="{{ $blog->banner_thumb_alt }}">
                 </div>
                 </div>
         </div>
@@ -47,11 +49,11 @@
             <div class="col-12 col-xl-8 pe-md-4">
                 <div class="blog-post-header">
                     <div class="blog-post-thumbnail">
-                        <img src="{{$blog->banner}}">
+                        <img src="{{$blog->banner}}" alt="{{ $blog->banner_thumb_alt }}">
                     </div>
                 </div>
                 <div class="blog-post-content">
-                        {!! $blog->description !!}
+                        {!! $blog->description !!} 
                 </div>
                 <div class="blog-post-footer">
                     <div class="row align-items-center">
@@ -72,21 +74,32 @@
                                     <div class="post-share-media">
                                         <span class=' share-icon bx bx-share-alt'></span>
                                         <div class="share-list">
-                                            <a href="https://twitter.com/share?url={{url()->current()}}">
+                                            {{-- <a target="_blank" href="https://twitter.com/?lang=en">
+                                                <span class='bx bxl-twitter'></span>
+                                            </a> --}}
+
+                                            <a target="_blank" href="https://twitter.com/?lang=en?u={{url()->current()}}">
                                                 <span class='bx bxl-twitter'></span>
                                             </a>
-                                            <a href="https://www.facebook.com/sharer.php?u={{url()->current()}}">
+                                            <a target="_blank" href="https://www.facebook.com/sharer.php?u={{url()->current()}}">
                                                 <span class='bx bxl-facebook'></span>
                                             </a>
-                                            <!--<a href="https://www.instagram.com/share?url={{url()->current()}}">-->
-                                            <!--    <span class='bx bxl-instagram'></span>-->
-                                            <!--</a>-->
-                                            <a href="https://www.linkedin.com/share?url={{url()->current()}}">
+                                            {{-- <a target="_blank" href="https://www.instagram.com/">
+                                                <span class='bx bxl-instagram'></span>
+                                            </a> --}}
+                                            <a target="_blank" href="https://www.instagram.com/?u={{url()->current()}}">
+                                                <span class='bx bxl-instagram'></span>
+                                            </a>
+                                            {{-- <a target="_blank" href="https://www.linkedin.com/checkpoint/lg/sign-in-another-account?trk=guest_homepage-basic_nav-header-signin">
+                                                <span class='bx bxl-linkedin'></span>
+                                            </a> --}}
+
+                                            <a target="_blank" href="https://www.linkedin.com/home?u={{url()->current()}}">
                                                 <span class='bx bxl-linkedin'></span>
                                             </a>
-                                            <!--<a href="#">-->
-                                            <!--    <span class='bx bxl-pinterest-alt'></span>-->
-                                            <!--</a>-->
+                                            <a target="_blank" href="https://in.pinterest.com/?u={{url()->current()}}">
+                                                <span class='bx bxl-pinterest-alt'></span>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -99,39 +112,46 @@
                     <div class="post-slider">
                         <div class="row">
 
-                            @foreach($related_blogs as $blog)
-                            <div class="col-md-6">
-                                <div class="post-slider-item">
-                                    <div class=" post-wrap card">
-                                        <div class="post-wrap-thumbnail">
-                                            <img src="{{ $blog->thumbnail }}"
-                                                class="card-img-top" alt="...">
+                            @if ($related_blogs->count() > 0)
+                                @foreach($related_blogs as $blog)
+                                <div class="col-md-6">
+                                    <div class="post-slider-item">
+                                        <div class=" post-wrap card">
+                                            <div class="post-wrap-thumbnail">
+                                                <img src="{{ $blog->thumbnail }}"
+                                                    class="card-img-top" alt="{{ $blog->banner_thumb_alt ?? 'Thumbnail Image' }}">
 
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="post-caption">
-                                                {{-- <div class="blog-post-category">
-                                                    <a href="#">
-                                                        <span class='bx bx-chevrons-right text-pink'></span>
-                                                        <span class="cat-name">{{ $blog->category->name }}</span>
-                                                    </a>
-                                                </div> --}}
-                                                <h6 class="post-title">
-                                                    <a href="{{ route('viewBlogInner',$blog->slug) }}">{{ $blog->title  }}</a>
-                                                </h6>
-                                                <div class="post-meta">
-                                                    <div class="post-date">
-                                                        <span>
-                                                           {{ \Carbon\Carbon::parse($blog->publish_date)->format('M d, Y') }}
-                                                        </span>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="post-caption">
+                                                    {{-- <div class="blog-post-category">
+                                                        <a href="#">
+                                                            <span class='bx bx-chevrons-right text-pink'></span>
+                                                            <span class="cat-name">{{ $blog->category->name }}</span>
+                                                        </a>
+                                                    </div> --}}
+                                                    <h6 class="post-title">
+                                                        <a href="{{ route('viewBlogInner',$blog->slug) }}">{{ $blog->title  }}</a>
+                                                    </h6>
+                                                    <div class="post-meta">
+                                                        <div class="post-date">
+                                                            <span>
+                                                            {{ \Carbon\Carbon::parse($blog->publish_date)->format('M d, Y') }}
+                                                            </span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            @endforeach
+                                @endforeach
+
+                                @else
+                                <div class="col-md-12">
+                                    <p>No related blogs available</p>
+                                </div>
+                            @endif
 
                         </div>
                     </div>
@@ -192,7 +212,7 @@
 
                                     @foreach($categoryies as $category)
                                     <li class="cat-item">
-                                        <a href="">
+                                        <a href="{{ route('viewBlog')}}?search={{$category->name}}">
                                             {{$category->name}}
                                             <span class="count">({{$category->blog->count()}})</span>
                                         </a>

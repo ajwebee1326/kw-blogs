@@ -28,6 +28,9 @@ return new class extends Migration
 
             $table->mediumText('banner')->default('default.jpg');
             $table->mediumText('thumbnail')->default('default.jpg');
+
+            $table->mediumText('banner_thumb_alt')->nullable();
+
             $table->string('meta_title')->nullable();
             $table->mediumText('meta_description')->nullable();
             $table->boolean('is_published')->default(true);

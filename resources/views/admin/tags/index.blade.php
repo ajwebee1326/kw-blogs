@@ -26,10 +26,11 @@
                         <td>{{$tag->name}}</td>
                         <td>
                         <a href="{{ route('tags.edit',$tag->id) }}" class="btn btn-primary btn-sm">Edit</a>
-                           <form action="{{ route('tags.destroy' , $tag->id) }}" method="POST" class="d-inline">
+                           <form action="{{ route('tags.destroy' , $tag->id) }}" method="POST" class="d-inline" id="deleteForm{{$tag->id}}">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                {{-- <button type="submit" class="btn btn-danger btn-sm">Delete</button> --}}
+                                <button type="button" onclick="confirmDelete({{ $tag->id }})" class="btn btn-danger btn-sm">Delete</button>
                             </form>
                         </td>
                     </tr>
@@ -48,5 +49,12 @@
         $(document).ready( function () {
             $('#datatable-tag').DataTable();
         } );
+
+        function confirmDelete(tagId) {
+                    if (confirm('Are you sure you want to delete this tag?')) {
+                        document.getElementById('deleteForm'+tagId).submit();
+                    }
+                }
+
     </script>
 @endsection
