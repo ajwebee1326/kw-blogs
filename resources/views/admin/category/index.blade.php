@@ -28,10 +28,11 @@
                         <td>{{$category->name}}</td>
                         <td>
                         <a href="{{ route('category.edit',$category->id) }}" class="btn btn-primary btn-sm">Edit</a>
-                           <form action="{{ route('category.destroy' , $category->id) }}" method="POST" class="d-inline">
+                           <form action="{{ route('category.destroy' , $category->id) }}" method="POST" class="d-inline" id="deleteForm{{$category->id}}">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                {{-- <button type="submit" class="btn btn-danger btn-sm">Delete</button> --}} 
+                                <button type="button" class="btn btn-danger btn-sm" onclick="confirmDelete({{ $category->id }})">Delete</button>
                             </form>
                         </td>
                     </tr>
@@ -50,5 +51,11 @@
         $(document).ready( function () {
             $('#datatable-category').DataTable();
         } );
+
+        function confirmDelete(categoryId) {
+                    if (confirm('Are you sure you want to delete this category?')) {
+                        document.getElementById('deleteForm'+categoryId).submit();
+                    }
+                }
     </script>
 @endsection

@@ -48,7 +48,7 @@ class CategoryController extends Controller
         $category->name = $request->category_name;
 
         if($category->save()){
-            $this->alert('success','Category Saved successfully','success');
+            $this->alert('Success','Category Saved successfully','success');
             return redirect()->route('category.index');
         }
         $this->alert('error','Something went wrong','danger');
@@ -94,7 +94,7 @@ class CategoryController extends Controller
 
         $category->name = $request->category_name;
         if($category->save()){
-            $this->alert('success', 'Category Updated Successfully', 'success');
+            $this->alert('Success', 'Category Updated Successfully', 'success');
             return redirect()->route('category.index');
         }
         $this->alert('error', 'Something Went Wrong', 'error');
@@ -110,7 +110,7 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         if($category->delete()){
-            $this->alert('success','Category Removed successfully','success');
+            $this->alert('Success','Category Removed successfully','success');
             return redirect()->route('category.index');
 
         }

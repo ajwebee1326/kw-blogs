@@ -90,7 +90,7 @@ class MetaController extends Controller
         if($meta->save()){
            
 
-            $this->alert('success','Meta Updated','success');
+            $this->alert('Success','Meta Updated','success');
             return redirect()->route('meta.index');
         }
         $this->alert('error','Somethig went wrong','danger');

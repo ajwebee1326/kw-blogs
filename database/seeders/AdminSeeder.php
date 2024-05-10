@@ -16,10 +16,16 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
+        // User::create([
+        //     'name' => 'Admin',
+        //     'email' => 'admin@gmail.com',
+        //     'password' => Hash::make('12345')
+        // ]);
+
         User::create([
             'name' => 'Admin',
-            'email' => 'admin@gmail.com',
-            'password' => Hash::make('12345')
+            'email' => 'kw_blog@kaykewalk.com',
+            'password' => Hash::make('Kw@blogs11')
         ]);
     }
 }

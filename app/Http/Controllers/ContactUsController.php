@@ -82,7 +82,7 @@ class ContactUsController extends Controller
     {
         if($contactus->delete()) {
 
-            $this->alert('success', 'Contact Removed Successfully','success');
+            $this->alert('Success', 'Contact Removed Successfully','success');
             return redirect()->route('subscribe');
         }
 

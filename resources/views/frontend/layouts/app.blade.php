@@ -4,6 +4,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>@yield('title')</title>
+
+         <!-- Meta Description -->
+        <meta name="description" content="@yield('meta_description')">
+
         <!--- Google Fonts --->
         <link
             href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap"
