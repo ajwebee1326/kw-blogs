@@ -32,21 +32,21 @@
                             <div class="col-12 col-xl-7 mb-3 mb-xl-0">
                                 <input type="email" class="form-control " id="" name="newsletter_email" placeholder="Enter Your Email Address" required>
                             </div>
-                            <div class="col-12 col-xl-5 mb-3 mb-xl-0">
+                            <div class="col-12 col-xl-5 mb-3 mb-xl-0 btn-submit">
                                 <button type="submit" class="btn btn-primary btn-subscribe">Submit</button>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row bottom-row">
                     <div class=" col-12 col-lg-4 col-xl-5 mb-4 mb-xl-0">
                         <div class="footer-list">
                             <h5 class="mb-3">Follow Us</h5>
                             <ul class="list-unstyled social-icon footer-icon mb-0">
-                                <li><a href="#"><span class='bx bxl-facebook'></span></a></li>
-                                <li><a href="#"><span class='bx bxl-instagram'></span></a></li>
-                                <li><a href="#"><span class='bx bxl-twitter'></span></a></li>
-                                <li><a href="#"><span class='bx bxl-linkedin'></span></a></li>
+                                <li><a href="https://www.facebook.com/people/Kaykewalk/61558529120460/?mibextid=LQQJ4d" target="_blank"><span class='bx bxl-facebook'></span></a></li>
+                                <li><a href="https://www.instagram.com/kaykewalkhq/" target="_blank"><span class='bx bxl-instagram'></span></a></li>
+                                <li><a href="https://twitter.com/kaykewalk" target="_blank"><img src="{{asset('frontend')}}/images/x.png"></a></li>
+                                <li><a href="https://www.linkedin.com/company/kaykewalk/" target="_blank"><span class='bx bxl-linkedin'></span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                     </div>
                     <div class="col-12  col-lg-4 col-xl-3">
                         <div class="footer-list">
-                            <h5 class="mb-3">Other Link</h5>
+                            <h5 class="mb-3">Other Links</h5>
                             <ul class="list-unstyled footer-icon footer-icon-connect">
                                 <li><a href="{{route('viewBlog')}}"><span class='bx bx-chevrons-right'></span>Blog</a></li>
                                 <li><a href="{{route('viewContactUsPage')}}"><span class='bx bx-chevrons-right'></span>Contact Us</a></li>

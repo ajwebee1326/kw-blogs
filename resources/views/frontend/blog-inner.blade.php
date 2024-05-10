@@ -27,8 +27,9 @@
                 </div>
                 <div class="blog-post-meta mt-3">
                         <div class="blog-post-author">
-                            <span class='bx bx-chevrons-right text-secondary'></span>
-                            <span class="meta-value">Webeesocial</span>
+                            <!-- <span class='bx bx-chevrons-right text-secondary'></span> -->
+                            <img src="https://kaykewalk.com/storage/files/1/Janet_auth.jpeg" alt="Webeesocial Logo">
+                            <span class="meta-value">Janet Augustine</span>
                         </div>
                         <div class="blog-post-date">
                             <span class='bx bx-calendar text-yellow me-1'></span>
@@ -71,21 +72,21 @@
                                     <div class="post-share-media">
                                         <span class=' share-icon bx bx-share-alt'></span>
                                         <div class="share-list">
-                                            <a href="https://twitter.com/?lang=en">
+                                            <a href="https://twitter.com/share?url={{url()->current()}}">
                                                 <span class='bx bxl-twitter'></span>
                                             </a>
-                                            <a href="https://www.facebook.com/reel/1411633062763319">
+                                            <a href="https://www.facebook.com/sharer.php?u={{url()->current()}}">
                                                 <span class='bx bxl-facebook'></span>
                                             </a>
-                                            <a href="https://www.instagram.com/">
-                                                <span class='bx bxl-instagram'></span>
-                                            </a>
-                                            <a href="https://www.linkedin.com/checkpoint/lg/sign-in-another-account?trk=guest_homepage-basic_nav-header-signin">
+                                            <!--<a href="https://www.instagram.com/share?url={{url()->current()}}">-->
+                                            <!--    <span class='bx bxl-instagram'></span>-->
+                                            <!--</a>-->
+                                            <a href="https://www.linkedin.com/share?url={{url()->current()}}">
                                                 <span class='bx bxl-linkedin'></span>
                                             </a>
-                                            <a href="#">
-                                                <span class='bx bxl-pinterest-alt'></span>
-                                            </a>
+                                            <!--<a href="#">-->
+                                            <!--    <span class='bx bxl-pinterest-alt'></span>-->
+                                            <!--</a>-->
                                         </div>
                                     </div>
                                 </div>
@@ -158,9 +159,10 @@
                                     </button>
                                 </form>
                             </div>
+                            <hr>
                             <div id="recent-post" class="recent-post">
                                 <div class="blog-search-title widget-title">
-                                    <span>Recent Post</span>
+                                    <span>Recent Posts</span>
                                 </div>
                                 
                                 <div class="recent-post-item">
@@ -201,7 +203,7 @@
                             </div>
                             <div id="popular-tag" class="blog-tag">
                                 <div class="blog-search-title widget-title">
-                                    <span>Popular Tag</span>
+                                    <span>Tags</span>
                                 </div>
 
                                 @foreach ($tags as $tag)

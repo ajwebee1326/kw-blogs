@@ -21,7 +21,8 @@
                         <img src="{{asset('frontend')}}/images/yellow-banner-gif.gif" alt="animated-gif">
                     </div>
                     <div class="banner-content text-center">
-                        <p class="sub-text">Launching Soon...</p>
+                        <p class="sub-text">Hey there, creative folks!</p>
+                        <p class="sub-text">We’re launching soon...</p>
                         <p class="sub-text">One place to make all your tasks</p>
                         <h1>A PIECE OF CAKE !</h1>
                     </div>

@@ -46,7 +46,7 @@ class NewsLetterController extends Controller
 
         if($newsletters->save()){
            
-            return redirect()->route('viewIndex')->with('message', 'Thank you for subscribe');
+            return redirect()->route('viewIndex')->with('message', 'Thank you for subscribing');
             
         }
         $this->alert('error','Something went wrong','danger');
