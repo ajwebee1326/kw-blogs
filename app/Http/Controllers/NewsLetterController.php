@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\NewsLetter;
 use Illuminate\Http\Request;
+use App\Notifications\NewsLetterNotification;
 
 class NewsLetterController extends Controller
 {
@@ -46,6 +47,9 @@ class NewsLetterController extends Controller
 
         if($newsletters->save()){
            
+
+            $newsletters->notify(new NewsLetterNotification($newsletters));
+
             return redirect()->route('viewIndex')->with('message', 'Thank you for subscribing');
             
         }
