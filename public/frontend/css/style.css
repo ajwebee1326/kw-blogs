@@ -464,11 +464,14 @@ div .border-top {
   .demo-account{
 	background-color: var(--bg-secondary);
   }
-  div .demo-account button.btn-primary{
+  div .demo-account .btn-primary{
 	width: auto;
 	padding: 6px 15px;
+	padding: 0.625rem 0.875rem;
+	font-size: 14px;
+	border-radius: 10px;
   }
-  div .demo-account button.btn-primary:hover{
+  div .demo-account .btn-primary:hover{
 	background-color: var(--bg-pink);
 	border: 1px solid var(--bg-pink);
 	box-shadow: none;

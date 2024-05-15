@@ -227,7 +227,7 @@
                 <div class="monthly-newsletter demo-account">
                     <h6 class="title pb-2">Get an Early Access Demo</h6>
                     <p class="description">Sign Up and get early access our platform’s Demo.</p>
-                      <button type="submit" class="btn btn-primary btn-subscribe">Demo</button>
+                      <a href="{{route('viewDemo')}}" class="btn btn-primary btn-subscribe">Demo</a>
                 </div>
             </div>
                 
