@@ -24,7 +24,7 @@
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse pb-3 pb-lg-0" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item nav-small">
                         <a class="nav-link active" aria-current="page" href="#"><span class="bx bxs-bell-ring secondary-tooltip"
@@ -46,8 +46,9 @@
                         <a class="nav-link" href="{{route('viewContactUsPage')}}">Contact Us</a>
                     </li>
 
-
+                
                 </ul>
+                <a href="{{route('viewDemo')}}" class="btn-primary btn-demo">Demo</a>
 
             </div>
         </div>
