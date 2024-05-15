@@ -73,7 +73,7 @@
                     <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
                       <i class="menu-icon tf-icons bx bx-file"></i>Choose </a>
                   </span>
-                  <input id="thumbnail" class="form-control" type="text" value="{{$blogs->thumbnail}}" name="thumbnail">
+                  <input id="thumbnail" class="form-control" type="text" value="{{$blogs->thumbnail}}" name="thumbnail" required>
                 </div>
               </div>
             </div>
@@ -85,10 +85,19 @@
                     <a id="banners" data-input="banner" data-preview="holder" class="btn btn-primary">
                       <i class="menu-icon tf-icons bx bx-file"></i>Choose </a>
                   </span>
-                  <input id="banner" class="form-control" type="text" value="{{$blogs->banner}}" name="banner">
+                  <input id="banner" class="form-control" type="text" value="{{$blogs->banner}}" name="banner" required>
                 </div>
               </div>
             </div>
+
+            <div class="col-md-3">
+              <div class="mb-3">
+                <label class="form-label" for="basic-icon-default-message">Image Alt tag</label>
+                <input type="text" name="alt" class="form-control" value="{{$blogs->banner_thumb_alt}}" placeholder="Image Alt">
+              </div>
+            </div>
+
+
             <div class="col-md-4 mb-3">
               <div>
                 <label class="form-label" for="basic-icon-default-message">Short Description</label>
