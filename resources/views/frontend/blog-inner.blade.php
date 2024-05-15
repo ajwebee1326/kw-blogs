@@ -74,26 +74,17 @@
                                     <div class="post-share-media">
                                         <span class=' share-icon bx bx-share-alt'></span>
                                         <div class="share-list">
-                                            {{-- <a target="_blank" href="https://twitter.com/?lang=en">
-                                                <span class='bx bxl-twitter'></span>
-                                            </a> --}}
-
+                                         
                                             <a target="_blank" href="https://twitter.com/?lang=en?u={{url()->current()}}">
                                                 <span class='bx bxl-twitter'></span>
                                             </a>
                                             <a target="_blank" href="https://www.facebook.com/sharer.php?u={{url()->current()}}">
                                                 <span class='bx bxl-facebook'></span>
                                             </a>
-                                            {{-- <a target="_blank" href="https://www.instagram.com/">
-                                                <span class='bx bxl-instagram'></span>
-                                            </a> --}}
                                             <a target="_blank" href="https://www.instagram.com/?u={{url()->current()}}">
                                                 <span class='bx bxl-instagram'></span>
                                             </a>
-                                            {{-- <a target="_blank" href="https://www.linkedin.com/checkpoint/lg/sign-in-another-account?trk=guest_homepage-basic_nav-header-signin">
-                                                <span class='bx bxl-linkedin'></span>
-                                            </a> --}}
-
+                                           
                                             <a target="_blank" href="https://www.linkedin.com/home?u={{url()->current()}}">
                                                 <span class='bx bxl-linkedin'></span>
                                             </a>
@@ -109,39 +100,35 @@
                 </div>
                 <div class="related-post">
                     <h3 class="related-post-title">You May Also Like</h3>
-                    <div class="post-slider">
+                    <div class="post-slider blog-wrap">
                         <div class="row">
 
                             @if ($related_blogs->count() > 0)
                                 @foreach($related_blogs as $blog)
                                 <div class="col-md-6">
                                     <div class="post-slider-item">
-                                        <div class=" post-wrap card">
-                                            <div class="post-wrap-thumbnail">
-                                                <img src="{{ $blog->thumbnail }}"
-                                                    class="card-img-top" alt="{{ $blog->banner_thumb_alt ?? 'Thumbnail Image' }}">
-
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="post-caption">
-                                                    {{-- <div class="blog-post-category">
-                                                        <a href="#">
-                                                            <span class='bx bx-chevrons-right text-pink'></span>
-                                                            <span class="cat-name">{{ $blog->category->name }}</span>
-                                                        </a>
-                                                    </div> --}}
-                                                    <h6 class="post-title">
-                                                        <a href="{{ route('viewBlogInner',$blog->slug) }}">{{ $blog->title  }}</a>
-                                                    </h6>
-                                                    <div class="post-meta">
-                                                        <div class="post-date">
-                                                            <span>
-                                                            {{ \Carbon\Carbon::parse($blog->publish_date)->format('M d, Y') }}
-                                                            </span>
+                                        <div class="blog-post-item">
+                                            <a href="{{ route('viewBlogInner', $blog->slug) }}">
+                                                <div class="blog-post-thumbnail">
+                                                    <img src="{{ $blog->thumbnail }}"
+                                                        alt="{{ $blog->banner_thumb_alt ?? 'Thumbnail Image' }}">
+    
+                                                </div>
+                                                <div class="card-body p-0">
+                                                    <div class="post-info">
+                                                        <h4 class="post-title">
+                                                            <a href="{{ route('viewBlogInner',$blog->slug) }}">{{ $blog->title  }}</a>
+                                                        </h4>
+                                                        <div class="post-meta">
+                                                            <div class="post-date">
+                                                                <span>
+                                                                {{ \Carbon\Carbon::parse($blog->publish_date)->format('M d, Y') }}
+                                                                </span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -161,12 +148,11 @@
             <div class="col-12 col-xl-4">
                 <!--- Right Sidebar--->
                 <div class="blog-sidebar">
-                    <div class="page-sidebar-inner">
-                        <div class="page-sidebar-content">
+                    <div class="blog-sidebar-search">
+                        <div class="blog-sidebar-content">
                             <div id="search" class="blog-search">
                                 <div class="blog-search-title widget-title">
                                     <span>Search</span>
-
                                 </div>
                                 <form action="{{ route('viewBlog') }}" class="search-form">
                                     <label for="">
@@ -174,17 +160,17 @@
                                     </label>
                                     <button type="submit" class="search-submit">
                                         <span class="search-btn-icon bx bx-search"></span>
-                                        <span class="search-btn-text">
-                                            Search		</span>
+                                        <span class="search-btn-text">Search</span>
                                     </button>
                                 </form>
                             </div>
-                            <hr>
+                            <div class="py-2">
+                                <hr>
+                            </div>
                             <div id="recent-post" class="recent-post">
                                 <div class="blog-search-title widget-title">
                                     <span>Recent Posts</span>
                                 </div>
-                                
                                 <div class="recent-post-item">
                                     <div class="recent-post-thumbnail">
                                         <a href="{{ route('viewBlogInner', ['id' => $recentBlog->id]) }}"><img src="{{$recentBlog->thumbnail}}" alt="thumbnail"></a>
@@ -197,19 +183,16 @@
                                             <div class="recent-post-date">{{ \Carbon\Carbon::parse($blog->publish_date)->format('M d, Y') }}</div>
                                         </div>
                                         <div class="recent-post-title">
-                                        <h6><a class="text-white" href="{{ route('viewBlogInner',$blog->slug) }}">{{$recentBlog->title}}</a></h6>
+                                            <h6><a class="text-white" href="{{ route('viewBlogInner',$blog->slug) }}">{{$recentBlog->title}}</a></h6>
+                                        </div>
                                     </div>
-                                    
                                 </div>
-                               
-                                
                             </div>
                             <div id="category" class="blog-category">
                                 <div class="blog-search-title widget-title">
                                     <span>Category</span>
                                 </div>
                                 <ul>
-
                                     @foreach($categoryies as $category)
                                     <li class="cat-item">
                                         <a href="{{ route('viewBlog')}}?search={{$category->name}}">
@@ -219,13 +202,11 @@
                                     </li>
                                     @endforeach
                                 </ul>
-
                             </div>
                             <div id="popular-tag" class="blog-tag">
                                 <div class="blog-search-title widget-title">
                                     <span>Tags</span>
                                 </div>
-
                                 @foreach ($tags as $tag)
                                 <div class="multi-tag">
                                     <a href="{{ route('viewBlog') }}?search={{$tag->name}}" class="tag-link">{{$tag->name}}</a>
@@ -234,7 +215,22 @@
                             </div>
                         </div>
                     </div>
+                    <div class="monthly-newsletter early-access-newsletter">
+                        <h6 class="title pb-2">Collaborate, Innovate, Integrate</h6>
+                        <p class="description">Explore the latest trends and strategies in team management, client services, and creative collaboration with our monthly newsletter.</p>
+                        <form class="news-letter-sidebar mt-1" method="post" action="https://kaykewalk.webeetest.tech/news-letter/store">
+                            <input class="form-control" placeholder="Enter your email" type="email" name="newsletter_email" id="" required="">
+                            <button type="submit" class="btn btn-primary btn-subscribe">Subscribe Now</button>
+                        </form>
+                    </div>
                 </div>
+                <div class="monthly-newsletter demo-account">
+                    <h6 class="title pb-2">Get an Early Access Demo</h6>
+                    <p class="description">Sign Up and get early access our platform’s Demo.</p>
+                      <button type="submit" class="btn btn-primary btn-subscribe">Demo</button>
+                </div>
+            </div>
+                
 
             </div>
         </div>

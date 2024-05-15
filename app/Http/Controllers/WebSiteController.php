@@ -121,4 +121,8 @@ class WebSiteController extends Controller
        
         
     }
+
+    public function viewDemo(){
+        return view('frontend.demo');
+    }
 }
