@@ -95,7 +95,7 @@ It is just to check the uri segment value so that we can activate the currenct s
 
        <!--Contact us -->
        <li class="menu-item {{Request::segment(2)=='demo' ? 'menu-item active' : ''}}">
-        <a href="" class="menu-link ">
+        <a href="{{route('demo')}}" class="menu-link ">
           <i class="menu-icon tf-icons bx bx-file"></i>
           <div data-i18n="Layouts">Demo Inquiry</div>
         </a>
