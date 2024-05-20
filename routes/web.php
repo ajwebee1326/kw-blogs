@@ -9,6 +9,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TagsController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\NewsLetterController;
+use App\Http\Controllers\DemoController;
 
 
 use App\Http\Controllers\WebSiteController;
@@ -57,6 +58,15 @@ Route::group(['middleware' => 'auth','prefix'=>'/admin'], function () {
     
     Route::get('/news-letter', [NewsLetterController::class, 'index'])->name('news');
     Route::delete('/news-letter/{newsletter}', [NewsLetterController::class,'destroy'])->name('news.destroy');
+
+
+
+    
+    Route::get('/demo', [DemoController::class, 'index'])->name('demo');
+
+
+    /////////Demo Inquiry //////
+    
 
 
     /*-------------------------------
