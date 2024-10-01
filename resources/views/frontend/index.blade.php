@@ -2,7 +2,9 @@
 
 
 
-@section('title', 'Home')
+{{-- @section('title', 'Home') --}}
+@section('title', 'Kaykewalk | Project Management and Team Task Management Tool for Agencies & Creators')
+@section('meta_description', 'Kaykewalk is the ultimate project management tool designed for agencies and Creators. Simplify your workflow today!')
 
 @section('content')
 
